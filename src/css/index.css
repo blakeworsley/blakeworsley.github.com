@@ -167,17 +167,18 @@
   align-items: center;
   width: 25%;
   height: 24.3vh;
-  color: white;
+  color: #fff;
+  font-family: Lato-Regular;
   transition: 0.2s;
 }
 .project {
-  visibility: hidden;
+  opacity: 0.1;
 }
 .project-container:hover .project{
-  visibility: visible;
+  opacity: 1;
 }
 .project-container:hover {
-  background: rgb(99, 129, 181);
+  background: rgba(47, 47, 47, 0.35);
   font-size: 18px;
   z-index: 3;
 }
