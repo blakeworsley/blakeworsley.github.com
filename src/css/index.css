@@ -172,14 +172,16 @@
   transition: 0.2s;
 }
 .project {
-  opacity: 0.1;
+  opacity: 0;
+  font-size: 4.5em;
 }
 .project-container:hover .project{
   opacity: 1;
+  font-size: 5em;
 }
 .project-container:hover {
-  background: rgba(47, 47, 47, 0.35);
-  font-size: 18px;
+  background: rgb(52, 52, 52);
+  overflow: hidden;
   z-index: 3;
 }
 .row-1 {
@@ -189,8 +191,8 @@
   background: rgb(201, 201, 201);
 }
 .row-3 {
-background: rgb(168, 168, 168);
+  background: rgb(168, 168, 168);
 }
 .row-4 {
-background: rgb(139, 139, 139);
+  background: rgb(139, 139, 139);
 }
