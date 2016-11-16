@@ -6,7 +6,8 @@ class Header extends Component {
       <section className={`Header ${this.props.navActivated ? 'Header-active' : null}`}>
         {this.props.navActivated ?
           <img src='./img/arrow.svg' className='navigationImg'
-            onClick={() => {this.props.activateNav()}} /> :
+            onClick={() => {this.props.activateNav()}} />
+          :
           <img src='./img/menu.svg' className='navigationImg'
             onClick={() => {this.props.activateNav()}} />
         }
@@ -26,13 +27,15 @@ class Header extends Component {
               <p>Contact me below if you interested in some freelance web or design work.</p>
               <img src='./img/logo.svg' className='header-logo'/>
             </nav>
-          </aside> :
+          </aside>
+          :
           null
         }
-        {/* <h1 className="header-title">Front End Web Developer</h1> */}
       </section>
     );
   }
 }
 
 export default Header;
+
+{/* <h1 className="header-title">Front End Web Developer</h1> */}
