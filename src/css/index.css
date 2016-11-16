@@ -168,5 +168,28 @@
   width: 25%;
   height: 24.3vh;
   color: white;
+  transition: 0.2s;
+}
+.project {
+  visibility: hidden;
+}
+.project-container:hover .project{
+  visibility: visible;
+}
+.project-container:hover {
   background: rgb(99, 129, 181);
+  font-size: 18px;
+  z-index: 3;
+}
+.row-1 {
+  background: rgb(235, 235, 235);
+}
+.row-2 {
+  background: rgb(201, 201, 201);
+}
+.row-3 {
+background: rgb(168, 168, 168);
+}
+.row-4 {
+background: rgb(139, 139, 139);
 }
