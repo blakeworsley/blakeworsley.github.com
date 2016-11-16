@@ -3,6 +3,8 @@
   max-width: 100%;
 }
 
+
+
 .Header {
   display: block;
   position: absolute;
@@ -55,6 +57,16 @@
 .Header .navigationImg {
   margin-left: 10px;
   position: fixed;
+  transition: 0.2s;
+}
+
+.Header .navigationImg:hover {
+  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -o-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transition: 0.2s;
 }
 
 .header-logo {
@@ -123,4 +135,5 @@
   justify-content: center;
   align-items: center;
   height: 100%;
+  overflow-y: scroll;
 }
