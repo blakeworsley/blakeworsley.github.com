@@ -15,7 +15,7 @@ class Main extends Component {
           null
         }
         <section className='main-container'>
-          <h1>Main</h1>
+          <img src='./img/logo-art.svg' />
         </section>
       </section>
     );

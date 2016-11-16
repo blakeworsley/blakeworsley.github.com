@@ -23,13 +23,18 @@ class Header extends Component {
               <h2>Contact<span>
                 <img src='./img/arrow-right.svg' className='selectedArrow'/>
               </span></h2>
+            </nav>
+            <section className='header-bio'>
               <p>I am a front end web developer who was part fish in a previous life.</p>
               <p>Contact me below if you interested in some freelance web or design work.</p>
-              <img src='./img/logo.svg' className='header-logo'/>
-            </nav>
+            </section>
+            <img src='./img/logo.svg' className='header-logo'/>
           </aside>
           :
-          null
+          <h1 className='header-title'>Blake Worsley
+            <span className='header-title-span'>Front End Web Developer</span>
+          </h1>
+
         }
       </section>
     );
