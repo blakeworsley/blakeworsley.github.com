@@ -148,8 +148,25 @@
 .main-container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   height: 100%;
   overflow-y: scroll;
+}
+
+
+
+
+.Projects {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.project-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25%;
+  height: 24.3vh;
+  color: white;
+  background: rgb(99, 129, 181);
 }
