@@ -8,8 +8,15 @@ class Main extends Component {
   render() {
     return (
       <section className={`Main ${this.props.navActivated ? 'Main-active' : null}`}>
-        {this.props.navActivated ? <div className="main-fade-out"></div> : null }
-        <h1>Main</h1>
+        {this.props.navActivated ?
+          <div className='main-fade-out'
+            onClick={() => {this.props.activateNav()}}></div>
+          :
+          null
+        }
+        <section className='main-container'>
+          <h1>Main</h1>
+        </section>
       </section>
     );
   }
