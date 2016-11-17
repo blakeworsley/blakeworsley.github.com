@@ -3,6 +3,8 @@
   max-width: 100%;
 }
 
+
+
 .Header {
   display: block;
   position: absolute;
@@ -13,14 +15,19 @@
   left: 0;
   margin: 10px 0px;
   background: #fff;
+  font-family: Lato-Regular;
+  font-size: 16px;
+  line-height: 30px;
   overflow-y: scroll;
-  transition: 0.5s;
+  transition: 0.25s;
 }
 
 .header-title {
-  margin-top: 200px;
+  margin-top: 450px;
+  letter-spacing: 0.1em;
   white-space: nowrap;
-  transition: 0.5s;
+  transition-delay: 2s;
+  transition: 0.25s;
   transform: rotate(270deg);
   -webkit-transform: rotate(270deg);
   -moz-transform: rotate(270deg);
@@ -28,20 +35,26 @@
   -ms-transform: rotate(270deg);
 }
 
+.header-title-span {
+  color: rgb(149, 149, 149);
+  padding: 0px 20px;
+}
+
 .Header-active {
   width: 300px;
   text-align: left;
-  transition: 0.5s;
+  transition: 0.25s;
 }
 
 .header-nav {
-  font-family: Lato-Regular;
-  font-size: 16px;
   color: #4A4A4A;
-  line-height: 30px;
-  padding: 50px;
+  padding: 50px 50px 25px 50px;
   transition-delay: 5s;
   transition: 2s;
+}
+
+.header-bio {
+  padding: 25px 50px;
 }
 
 .Header h2, .Header p {
@@ -55,10 +68,24 @@
 .Header .navigationImg {
   margin-left: 10px;
   position: fixed;
+  transition: 0.2s;
+}
+
+.Header .navigationImg:hover {
+  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -o-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transition: 0.2s;
 }
 
 .header-logo {
-  padding: 56px;
+  display: block;
+  position: absolute;
+  bottom: 0;
+  margin: auto;
+  padding: 10px 106px;
 }
 
 .selectedArrow {
@@ -75,6 +102,7 @@
   -ms-transform: translateX(10px);
   padding-right: 10px;
 }
+
 .header-nav h2:hover {
   margin-left: -10px;
   padding-left: 10px;
@@ -94,13 +122,13 @@
   left: 0;
   right: 0;
   margin: 10px 10px 10px 50px;
-  background: #d9d9d9;
+  background: #f2f2f2;
   box-shadow: inset 0 1px 5px 0 rgba(0,0,0,0.20);
-  transition: 0.5s;
+  transition: 0.25s;
 }
 
 .Main-active {
-  margin-left: 300px;
+  margin: 20px 20px 20px 300px;
 }
 
 .main-fade-out {
@@ -111,8 +139,60 @@
   top: 0;
   left: 0;
   right: 0;
-  background: rgba(56, 56, 56, 0.81);
+  background: rgba(56, 56, 56, 0.8);
   box-shadow: inset 0 1px 5px 0 rgba(0,0,0,0.20);
-  transition: 0.5s;
+  transition: 0.25s;
   z-index: 2;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow-y: scroll;
+}
+
+
+
+
+.Projects {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.project-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25%;
+  height: 24.3vh;
+  color: #fff;
+  font-family: Lato-Regular;
+  transition: 0.2s;
+}
+.project {
+  opacity: 0;
+  font-size: 4.5em;
+}
+.project-container:hover .project{
+  opacity: 1;
+  font-size: 5em;
+}
+.project-container:hover {
+  background: rgb(52, 52, 52);
+  overflow: hidden;
+  z-index: 3;
+}
+.row-1 {
+  background: rgb(235, 235, 235);
+}
+.row-2 {
+  background: rgb(201, 201, 201);
+}
+.row-3 {
+  background: rgb(168, 168, 168);
+}
+.row-4 {
+  background: rgb(139, 139, 139);
 }
