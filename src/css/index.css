@@ -169,15 +169,16 @@
   height: 24.3vh;
   color: #fff;
   font-family: Lato-Regular;
-  transition: 0.2s;
+  transition: 0.3s;
 }
 .project {
   opacity: 0;
-  font-size: 4.5em;
+  font-size: 1.1em;
+  transition: 0.3s;
 }
 .project-container:hover .project{
   opacity: 1;
-  font-size: 5em;
+  font-size: 1.2em;
 }
 .project-container:hover {
   background: rgb(52, 52, 52);

@@ -17,7 +17,7 @@ class App extends Component {
   }
 
   render() {
-    const { navActivated } = this.state
+    const { navActivated } = this.state;
     return (
       <div className="App">
         <Header activateNav={ () => { this.activateNav() }}
