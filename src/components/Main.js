@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Projects from './Projects';
 import About from './About';
 import Contact from './Contact';
+import Start from './Start';
 
 class Main extends Component {
 
@@ -15,6 +16,7 @@ class Main extends Component {
           null
         }
         <section className='main-container'>
+          <Start />
           <Projects />
           {/* <img src='./img/logo-art.svg' /> */}
         </section>
