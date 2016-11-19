@@ -5,30 +5,30 @@ class Header extends Component {
     return (
       <section className={`Header ${this.props.navActivated ? 'Header-active' : null}`}>
         {this.props.navActivated ?
-          <img src='./img/arrow.svg' className='navigationImg'
+          <img src='./img/arrow.svg' className='navigationImg' role='presentation'
             onClick={() => {this.props.activateNav()}} />
           :
-          <img src='./img/menu.svg' className='navigationImg'
+          <img src='./img/menu.svg' className='navigationImg' role='presentation'
             onClick={() => {this.props.activateNav()}} />
         }
         {this.props.navActivated ?
           <aside>
             <nav className='header-nav'>
               <h2>Projects<span>
-                <img src='./img/arrow-right.svg' className='selectedArrow'/>
+                <img src='./img/arrow-right.svg' className='selectedArrow' role='presentation'/>
               </span></h2>
               <h2>About<span>
-                <img src='./img/arrow-right.svg' className='selectedArrow'/>
+                <img src='./img/arrow-right.svg' className='selectedArrow' role='presentation'/>
               </span></h2>
               <h2>Contact<span>
-                <img src='./img/arrow-right.svg' className='selectedArrow'/>
+                <img src='./img/arrow-right.svg' className='selectedArrow' role='presentation'/>
               </span></h2>
             </nav>
             <section className='header-bio'>
               <p>I am a front end web developer who was part fish in a previous life.</p>
               <p>Contact me below if you interested in some freelance web or design work.</p>
             </section>
-            <img src='./img/logo.svg' className='header-logo'/>
+            <img src='./img/logo.svg' className='header-logo' role='presentation'/>
           </aside>
           :
           <h1 className='header-title'>Blake Worsley
@@ -42,5 +42,3 @@ class Header extends Component {
 }
 
 export default Header;
-
-{/* <h1 className="header-title">Front End Web Developer</h1> */}

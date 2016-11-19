@@ -197,3 +197,12 @@
 .row-4 {
   background: rgb(139, 139, 139);
 }
+
+
+
+
+.About {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+}

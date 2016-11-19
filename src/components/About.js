@@ -5,7 +5,16 @@ class About extends Component {
   render() {
     return (
       <section className='About'>
-        <h1>About</h1>
+        <a name='about'><h1>About</h1></a>
+        <p>laksjdfjsdakljfljaskldfjljaskldfjjalsdkjfklasdkljflkjasdlkfjlkasdfjajsdlkfja
+        sdfjajsdklfjklasdjf
+      asdjf
+    asdfojsdfkljlskdjfkjlasjdlkfjklajsdf
+  ajsd;fjksjdlfjlkasdjlkfjklajsdf
+asdfjklajsdjfkasdlfja
+sdfjalksjdflkjaslkdjfkljaskldjflkajslkdjflkajsdlkfjaklsdjhjkhsgdoiugweoihewugahsodigjhjshdgaiouhwadgs
+gaklsdjgoijawejogjwoejjsdg
+sdjgaoisdgijasdoigjoasjdglashdglkjasdljgasdkjglkjds</p>
       </section>
     );
   }

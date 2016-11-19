@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import Projects from './Projects';
-import About from './About';
-import Contact from './Contact';
 import Start from './Start';
+import About from './About';
 
 class Main extends Component {
 
@@ -18,7 +17,8 @@ class Main extends Component {
         <section className='main-container'>
           <Start />
           <Projects />
-          {/* <img src='./img/logo-art.svg' /> */}
+          <About />
+          {/* <img src='./img/logo-art.svg' role='presentation'/> */}
         </section>
       </section>
     );
