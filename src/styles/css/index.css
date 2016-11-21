@@ -1,0 +1,226 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/*# sourceMappingURL=reset.css.map */
+.App {
+  max-height: 100%;
+  max-width: 100%; }
+
+.Header {
+  display: block;
+  position: absolute;
+  height: auto;
+  width: 50px;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  margin: 10px 0px;
+  background: #fff;
+  font-family: Lato-Regular;
+  font-size: 16px;
+  line-height: 30px;
+  overflow-y: scroll;
+  transition: 0.25s; }
+
+.header-title {
+  margin-top: 450px;
+  letter-spacing: 0.1em;
+  white-space: nowrap;
+  transition-delay: 2s;
+  transition: 0.25s;
+  transform: rotate(270deg);
+  -webkit-transform: rotate(270deg);
+  -moz-transform: rotate(270deg);
+  -o-transform: rotate(270deg);
+  -ms-transform: rotate(270deg); }
+
+.header-title-span {
+  color: #959595;
+  padding: 0px 20px; }
+
+.Header-active {
+  width: 300px;
+  text-align: left;
+  transition: 0.25s; }
+
+.header-nav {
+  color: #4A4A4A;
+  padding: 50px 50px 25px 50px;
+  transition-delay: 5s;
+  transition: 2s; }
+
+.header-bio {
+  padding: 25px 50px; }
+
+.Header h2, .Header p {
+  padding: 10px 0; }
+
+.Header h2 {
+  font-size: 20px; }
+
+.Header .navigationImg {
+  margin-left: 10px;
+  position: fixed;
+  transition: 0.2s; }
+
+.Header .navigationImg:hover {
+  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -o-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transition: 0.2s; }
+
+.header-logo {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  margin: auto;
+  padding: 10px 106px; }
+
+.selectedArrow {
+  opacity: 0;
+  transition: 0.2s; }
+
+.header-nav h2:hover .selectedArrow {
+  opacity: 1;
+  transform: translateX(10px);
+  -webkit-transform: translateX(10px);
+  -moz-transform: translateX(10px);
+  -o-transform: translateX(10px);
+  -ms-transform: translateX(10px);
+  padding-right: 10px; }
+
+.header-nav h2:hover {
+  margin-left: -10px;
+  padding-left: 10px;
+  background-color: yellow; }
+
+.Main {
+  display: block;
+  position: absolute;
+  height: auto;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 10px 10px 10px 50px;
+  background: #f2f2f2;
+  box-shadow: inset 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.25s; }
+
+.Main-active {
+  margin: 20px 20px 20px 300px; }
+
+.main-fade-out {
+  display: block;
+  position: absolute;
+  height: auto;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: rgba(56, 56, 56, 0.8);
+  box-shadow: inset 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.25s;
+  z-index: 2; }
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow-y: scroll; }
+
+.Projects {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap; }
+
+.project-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25%;
+  height: 24.3vh;
+  color: #fff;
+  font-family: Lato-Regular;
+  transition: 0.3s; }
+
+.project {
+  opacity: 0;
+  font-size: 1.1em;
+  transition: 0.3s; }
+
+.project-container:hover .project {
+  opacity: 1;
+  font-size: 1.2em; }
+
+.project-container:hover {
+  background: #343434;
+  overflow: hidden;
+  z-index: 3; }
+
+.row-1 {
+  background: #ebebeb; }
+
+.row-2 {
+  background: #c9c9c9; }
+
+.row-3 {
+  background: #a8a8a8; }
+
+.row-4 {
+  background: #8b8b8b; }
+
+.About {
+  height: 80px;
+  width: 100%;
+  display: flex;
+  background: black; }
+
+/*# sourceMappingURL=index.css.map */

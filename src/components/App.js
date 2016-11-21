@@ -17,6 +17,7 @@ class App extends Component {
   }
 
   render() {
+
     const { navActivated } = this.state;
     return (
       <div className="App">
