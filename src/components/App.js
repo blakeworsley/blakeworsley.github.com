@@ -20,18 +20,27 @@ class App extends Component {
   }
 
   activateAbout(){
+    this.state.navActivated ? this.setState({navActivated: false}) : null
+    this.state.projectsActivated ? this.setState({projectsActivated: false}) : null
+    this.state.contactActivated ? this.setState({contactActivated: false}) : null
     this.state.aboutActivated ?
     this.setState({aboutActivated: false}) :
     this.setState({aboutActivated: true})
   }
 
   activateProjects(){
+    this.state.navActivated ? this.setState({navActivated: false}) : null
+    this.state.aboutActivated ? this.setState({aboutActivated: false}) : null
+    this.state.contactActivated ? this.setState({contactActivated: false}) : null
     this.state.projectsActivated ?
     this.setState({projectsActivated: false}) :
     this.setState({projectsActivated: true})
   }
 
   activateContact(){
+    this.state.navActivated ? this.setState({navActivated: false}) : null
+    this.state.aboutActivated ? this.setState({aboutActivated: false}) : null
+    this.state.projectsActivated ? this.setState({projectsActivated: false}) : null
     this.state.contactActivated ?
     this.setState({contactActivated: false}) :
     this.setState({contactActivated: true})
@@ -43,7 +52,14 @@ class App extends Component {
     return (
       <div className="App">
         <Header activateNav={ () => { this.activateNav() }}
-          navActivated={navActivated} />
+          navActivated={navActivated}
+          aboutActivated={aboutActivated}
+          activateAbout={() => {this.activateAbout()}}
+          projectsActivated={projectsActivated}
+          activateProjects={() => {this.activateProjects()}}
+          contactActivated={contactActivated}
+          activateContact={() => {this.activateContact()}}
+        />
         <Main activateNav={ () => { this.activateNav() }}
           navActivated={navActivated}
           aboutActivated={aboutActivated}

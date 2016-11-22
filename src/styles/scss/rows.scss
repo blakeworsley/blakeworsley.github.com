@@ -20,7 +20,6 @@
 .row:hover {
   opacity: 1;
   font-size: 3.6em;
-  background: rgb(70, 70, 70);
   overflow: hidden;
   z-index: 3;
 }
@@ -83,7 +82,7 @@
 }
 
 .hide-row{
+  visibility: hidden;
   opacity: 0;
   height: 0;
-  transition: 1s;
 }

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import About from './About';
+import Projects from './Projects';
 
 class Rows extends Component {
   render() {
@@ -35,7 +36,6 @@ class Rows extends Component {
             activateContact={activateContact}
           /> */}
         </section>
-        <section className='row row-4'>OTHER</section>
       </section>
     );
   }

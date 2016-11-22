@@ -18,7 +18,6 @@
 .row:hover {
   opacity: 1;
   font-size: 3.6em;
-  background: #464646;
   overflow: hidden;
   z-index: 3; }
 
@@ -67,8 +66,8 @@
   color: #464646; }
 
 .hide-row {
+  visibility: hidden;
   opacity: 0;
-  height: 0;
-  transition: 1s; }
+  height: 0; }
 
 /*# sourceMappingURL=rows.css.map */

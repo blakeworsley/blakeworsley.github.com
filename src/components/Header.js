@@ -2,25 +2,27 @@ import React, { Component } from 'react';
 
 class Header extends Component {
   render() {
+    const { activateNav, navActivated, aboutActivated, projectsActivated,
+      contactActivated, activateAbout, activateProjects, activateContact } = this.props;
     return (
-      <section className={`Header ${this.props.navActivated ? 'Header-active' : null}`}>
-        {this.props.navActivated ?
+      <section className={`Header ${navActivated ? 'Header-active' : null}`}>
+        {navActivated ?
           <img src='./img/arrow.svg' className='navigationImg' role='presentation'
-            onClick={() => {this.props.activateNav()}} />
+            onClick={() => {activateNav()}} />
           :
           <img src='./img/menu.svg' className='navigationImg' role='presentation'
-            onClick={() => {this.props.activateNav()}} />
+            onClick={() => {activateNav()}} />
         }
-        {this.props.navActivated ?
+        {navActivated ?
           <aside>
             <nav className='header-nav'>
-              <h2>Projects<span>
+              <h2 onClick={() => {activateAbout()}}>About<span>
                 <img src='./img/arrow-right.svg' className='selectedArrow' role='presentation'/>
               </span></h2>
-              <h2>About<span>
+              <h2 onClick={() => {activateProjects()}}>Projects<span>
                 <img src='./img/arrow-right.svg' className='selectedArrow' role='presentation'/>
               </span></h2>
-              <h2>Contact<span>
+              <h2 onClick={() => {activateContact()}}>Contact<span>
                 <img src='./img/arrow-right.svg' className='selectedArrow' role='presentation'/>
               </span></h2>
             </nav>
