@@ -14,21 +14,28 @@
   font-family: Lato-Regular;
   transition: 0.3s; }
 
-.project {
-  opacity: 0;
-  font-size: 1.1em;
+.row {
+  padding-left: 10px;
+  font-size: 5em;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 24.3vh;
+  color: #fff;
+  font-family: Lato-Regular;
   transition: 0.3s; }
 
-.project-container:hover .project {
+.row:hover {
   opacity: 1;
   font-size: 1.2em; }
 
-.project-container:hover {
+.row:hover {
   background: #343434;
   overflow: hidden;
   z-index: 3; }
 
 .row-1 {
+  height: 48.6vh;
   background: #ebebeb; }
 
 .row-2 {
@@ -40,4 +47,4 @@
 .row-4 {
   background: #8b8b8b; }
 
-/*# sourceMappingURL=projects.css.map */
+/*# sourceMappingURL=rows.css.map */

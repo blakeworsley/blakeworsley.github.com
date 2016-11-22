@@ -5,7 +5,7 @@ class Start extends Component {
   render() {
     return (
       <section className='Start'>
-        <h1>Start</h1>
+        <img src='./img/logo-art.svg' role='presentation'/>
       </section>
     );
   }
