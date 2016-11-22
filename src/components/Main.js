@@ -6,7 +6,7 @@ class Main extends Component {
   render() {
     const { navActivated, activateNav, aboutActivated,
       projectsActivated, contactActivated, activateAbout,
-      activateProjects, activateContact } = this.props;
+      activateProjects, activateContact, activateHome } = this.props;
     return (
       <section className={`Main ${navActivated ? 'Main-active' : null}`}>
         <section className='main-container'>
@@ -24,6 +24,7 @@ class Main extends Component {
             activateProjects={activateProjects}
             contactActivated={contactActivated}
             activateContact={activateContact}
+            activateHome={activateHome}
           />
         </section>
       </section>

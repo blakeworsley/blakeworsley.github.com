@@ -1,5 +1,7 @@
 .About {
-
+  height: 100%;
+  background: $color-light;
+  display: flex;
 }
 
 // .About-inactive {
@@ -10,5 +12,13 @@
 .About-active {
   opacity: 1;
   transition: 0.5s;
+}
 
+.about-header {
+  background-color: $color-lighter;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  font-size: 0.4em;
 }

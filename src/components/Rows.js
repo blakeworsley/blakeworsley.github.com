@@ -7,15 +7,15 @@ class Rows extends Component {
     const { navActivated,
       aboutActivated, projectsActivated,
       contactActivated, activateAbout,
-      activateProjects, activateContact } = this.props;
+      activateProjects, activateContact, activateHome } = this.props;
     return (
       <section className='Rows'>
 
-        <section className={`row row-1 ${aboutActivated ? 'row-active' : 'About-inactive'} ${(projectsActivated || contactActivated ) ? 'hide-row' : ''}`}
-          onClick={() => {activateAbout()}}>
+        <section className={`row row-1 ${aboutActivated ? 'row-active' : 'About-inactive'} ${(projectsActivated || contactActivated ) ? 'hide-row' : ''}`}>
           <About
             aboutActivated={aboutActivated}
             activateAbout={activateAbout}
+            activateHome={activateHome}
           />
         </section>
 

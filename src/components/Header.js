@@ -16,13 +16,16 @@ class Header extends Component {
         {navActivated ?
           <aside>
             <nav className='header-nav'>
-              <h2 onClick={() => {activateAbout()}}>About<span>
+              <h2 onClick={() => {activateAbout()}}
+                className={`${aboutActivated ? 'selected-nav' : 'unselected-nav'}`}>About<span>
                 <img src='./img/arrow-right.svg' className='selectedArrow' role='presentation'/>
               </span></h2>
-              <h2 onClick={() => {activateProjects()}}>Projects<span>
+              <h2 onClick={() => {activateProjects()}}
+                className={`${projectsActivated ? 'selected-nav' : 'unselected-nav'}`}>Projects<span>
                 <img src='./img/arrow-right.svg' className='selectedArrow' role='presentation'/>
               </span></h2>
-              <h2 onClick={() => {activateContact()}}>Contact<span>
+              <h2 onClick={() => {activateContact()}}
+                className={`${contactActivated ? 'selected-nav' : 'unselected-nav'}`}>Contact<span>
                 <img src='./img/arrow-right.svg' className='selectedArrow' role='presentation'/>
               </span></h2>
             </nav>

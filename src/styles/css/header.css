@@ -12,14 +12,14 @@
   font-size: 16px;
   line-height: 30px;
   overflow-y: scroll;
-  transition: 0.25s; }
+  transition: $transition-main; }
 
 .header-title {
   margin-top: 450px;
   letter-spacing: 0.1em;
   white-space: nowrap;
   transition-delay: 2s;
-  transition: 0.25s;
+  transition: $transition-main;
   transform: rotate(270deg);
   -webkit-transform: rotate(270deg);
   -moz-transform: rotate(270deg);
@@ -33,7 +33,7 @@
 .Header-active {
   width: 300px;
   text-align: left;
-  transition: 0.25s; }
+  transition: $transition-main; }
 
 .header-nav {
   color: #4A4A4A;
@@ -51,6 +51,7 @@
   font-size: 20px; }
 
 .Header .navigationImg {
+  margin-top: 11px;
   margin-left: 10px;
   position: fixed;
   transition: 0.2s; }
@@ -74,7 +75,7 @@
   opacity: 0;
   transition: 0.2s; }
 
-.header-nav h2:hover .selectedArrow {
+.header-nav .unselected-nav:hover .selectedArrow {
   opacity: 1;
   transform: translateX(10px);
   -webkit-transform: translateX(10px);
@@ -83,9 +84,13 @@
   -ms-transform: translateX(10px);
   padding-right: 10px; }
 
-.header-nav h2:hover {
+.header-nav .unselected-nav:hover {
   margin-left: -10px;
   padding-left: 10px;
   background-color: #ddf8ff; }
+
+.selected-nav {
+  color: #b4b4b4;
+  pointer-events: none; }
 
 /*# sourceMappingURL=header.css.map */
