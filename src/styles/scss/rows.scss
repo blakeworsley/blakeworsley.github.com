@@ -4,21 +4,10 @@
   display: flex;
   flex-wrap: wrap;
 }
-.project-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 25%;
-  height: 24.3vh;
-  color: #fff;
-  font-family: Lato-Regular;
-  transition: 0.3s;
-}
 
 .row {
-  // opacity: 0;
   padding-left: 10px;
-  font-size: 5em;
+  font-size: 3em;
   display: flex;
   align-items: center;
   width: 100%;
@@ -28,28 +17,52 @@
   transition: 0.3s;
 }
 
-.row-1 {
-}
-
-.row:hover{
-  opacity: 1;
-  font-size: 1.2em;
-}
 .row:hover {
-  background: rgb(52, 52, 52);
+  opacity: 1;
+  font-size: 4em;
+  background: rgb(70, 70, 70);
   overflow: hidden;
   z-index: 3;
 }
 .row-1 {
   height: 48.6vh;
   background: rgb(235, 235, 235);
+  transition: 0.2s;
+}
+.row-1:hover{
+  background: url(../../../public/img/steamboat-barn.jpg) no-repeat fixed;
+  background-size: cover;
+  transition: 0.2s;
+  color: rgb(70, 70, 70);
+
 }
 .row-2 {
   background: rgb(201, 201, 201);
 }
+.row-2:hover{
+  background: url(../../../public/img/steamboat-barn.jpg) no-repeat fixed;
+  background-size: cover;
+  transition: 0.2s;
+  opacity: 0.8;
+  color: rgb(70, 70, 70);
+}
 .row-3 {
   background: rgb(168, 168, 168);
 }
+.row-3:hover{
+  background: url(../../../public/img/steamboat-barn.jpg) no-repeat fixed;
+  background-size: cover;
+  transition: 0.2s;
+  opacity: 0.7;
+  color: rgb(70, 70, 70);
+}
 .row-4 {
   background: rgb(139, 139, 139);
+}
+.row-4:hover{
+  background: url(../../../public/img/steamboat-barn.jpg) no-repeat fixed;
+  background-size: cover;
+  transition: 0.2s;
+  opacity: 0.6;
+  color: rgb(70, 70, 70);
 }

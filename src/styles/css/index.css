@@ -138,7 +138,7 @@ table {
 .header-nav h2:hover {
   margin-left: -10px;
   padding-left: 10px;
-  background-color: yellow; }
+  background-color: #ddf8ff; }
 
 .Main {
   display: block;
@@ -223,19 +223,9 @@ table {
   display: flex;
   flex-wrap: wrap; }
 
-.project-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 25%;
-  height: 24.3vh;
-  color: #fff;
-  font-family: Lato-Regular;
-  transition: 0.3s; }
-
 .row {
   padding-left: 10px;
-  font-size: 5em;
+  font-size: 3em;
   display: flex;
   align-items: center;
   width: 100%;
@@ -246,25 +236,51 @@ table {
 
 .row:hover {
   opacity: 1;
-  font-size: 1.2em; }
-
-.row:hover {
-  background: #343434;
+  font-size: 4em;
+  background: #464646;
   overflow: hidden;
   z-index: 3; }
 
 .row-1 {
   height: 48.6vh;
-  background: #ebebeb; }
+  background: #ebebeb;
+  transition: 0.2s; }
+
+.row-1:hover {
+  background: url(../../../public/img/steamboat-barn.jpg) no-repeat fixed;
+  background-size: cover;
+  transition: 0.2s;
+  color: #464646; }
 
 .row-2 {
   background: #c9c9c9; }
 
+.row-2:hover {
+  background: url(../../../public/img/steamboat-barn.jpg) no-repeat fixed;
+  background-size: cover;
+  transition: 0.2s;
+  opacity: 0.8;
+  color: #464646; }
+
 .row-3 {
   background: #a8a8a8; }
 
+.row-3:hover {
+  background: url(../../../public/img/steamboat-barn.jpg) no-repeat fixed;
+  background-size: cover;
+  transition: 0.2s;
+  opacity: 0.7;
+  color: #464646; }
+
 .row-4 {
   background: #8b8b8b; }
+
+.row-4:hover {
+  background: url(../../../public/img/steamboat-barn.jpg) no-repeat fixed;
+  background-size: cover;
+  transition: 0.2s;
+  opacity: 0.6;
+  color: #464646; }
 
 .About {
   height: 80px;

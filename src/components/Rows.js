@@ -5,8 +5,8 @@ class Rows extends Component {
     return (
       <section className='Rows'>
         <section className='row row-1'>WHO</section>
-        <section className='row row-2'>2</section>
-        <section className='row row-3'>3</section>
+        <section className='row row-2'>PROJECTS</section>
+        <section className='row row-3'>CONTACT</section>
         <section className='row row-4'>4</section>
 
         {/* <article className='row-container row-1'><div className='row'>Row 1</div></article>
