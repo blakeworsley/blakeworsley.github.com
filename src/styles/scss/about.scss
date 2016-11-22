@@ -1,6 +1,14 @@
 .About {
-  height: 80px;
-  width: 100%;
-  display: flex;
-  background: black;
+
+}
+
+// .About-inactive {
+//   opacity: 0;
+//   transition: 0.5s;
+// }
+
+.About-active {
+  opacity: 1;
+  transition: 0.5s;
+
 }

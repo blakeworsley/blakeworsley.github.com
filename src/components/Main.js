@@ -3,19 +3,28 @@ import Projects from './Projects';
 import Rows from './Rows';
 
 class Main extends Component {
-
   render() {
+    const { navActivated, activateNav, aboutActivated,
+      projectsActivated, contactActivated, activateAbout,
+      activateProjects, activateContact } = this.props;
     return (
-      <section className={`Main ${this.props.navActivated ? 'Main-active' : null}`}>
+      <section className={`Main ${navActivated ? 'Main-active' : null}`}>
         <section className='main-container'>
-          {this.props.navActivated ?
+          {navActivated ?
             <div className='main-fade-out'
-              onClick={() => {this.props.activateNav()}}></div>
+              onClick={() => {activateNav()}}></div>
             :
             null
           }
-          <Rows />
-          {/* <Projects /> */}
+          <Rows
+            navActivated={navActivated}
+            aboutActivated={aboutActivated}
+            activateAbout={activateAbout}
+            projectsActivated={projectsActivated}
+            activateProjects={activateProjects}
+            contactActivated={contactActivated}
+            activateContact={activateContact}
+          />
         </section>
       </section>
     );

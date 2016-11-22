@@ -1,36 +1,62 @@
 import React, { Component } from 'react';
+import About from './About';
 
 class Rows extends Component {
   render() {
+    const { navActivated,
+      aboutActivated, projectsActivated,
+      contactActivated, activateAbout,
+      activateProjects, activateContact } = this.props;
     return (
       <section className='Rows'>
-        <section className='row row-1'>WHO</section>
-        <section className='row row-2'>PROJECTS</section>
-        <section className='row row-3'>CONTACT</section>
-        <section className='row row-4'>4</section>
 
-        {/* <article className='row-container row-1'><div className='row'>Row 1</div></article>
-        <article className='row-container row-1'><div className='row'>Row 1.2</div></article>
-        <article className='row-container row-1'><div className='row'>Row 1.3</div></article>
-        <article className='row-container row-1'><div className='row'>Row 1.4</div></article>
+        <section className={`row row-1 ${aboutActivated ? 'row-active' : 'About-inactive'} ${(projectsActivated || contactActivated ) ? 'hide-row' : ''}`}
+          onClick={() => {activateAbout()}}>
+          <About
+            aboutActivated={aboutActivated}
+            activateAbout={activateAbout}
+          />
+        </section>
 
-        <article className='row-container row-2'><div className='row'>Row 2</div></article>
-        <article className='row-container row-2'><div className='row'>Row 2.2</div></article>
-        <article className='row-container row-2'><div className='row'>Row 2.3</div></article>
-        <article className='row-container row-2'><div className='row'>Row 2.4</div></article>
+        <section className={`row row-2 ${projectsActivated ? 'row-active' : 'Projects-inactive'} ${(aboutActivated || contactActivated ) ? 'hide-row' : ''}`}
+          onClick={() => {activateProjects()}}>
+          PROJECTS
+          {/* <Projects
+            projectsActivated={projectsActivated}
+            activateProjects={activateProjects}
+          /> */}
+        </section>
 
-        <article className='row-container row-3'><div className='row'>Row 3</div></article>
-        <article className='row-container row-3'><div className='row'>Row 3.2</div></article>
-        <article className='row-container row-3'><div className='row'>Row 3.3</div></article>
-        <article className='row-container row-3'><div className='row'>Row 3.4</div></article>
-
-        <article className='row-container row-4'><div className='row'>Row 4</div></article>
-        <article className='row-container row-4'><div className='row'>Row 4.2</div></article>
-        <article className='row-container row-4'><div className='row'>Row 4.3</div></article>
-        <article className='row-container row-4'><div className='row'>Row 4.4</div></article> */}
+        <section className={`row row-3 ${contactActivated ? 'row-active' : 'Contact-inactive'} ${(aboutActivated || projectsActivated ) ? 'hide-row' : ''}`}
+          onClick={() => {activateContact()}}>
+          CONTACT
+          {/* <Contact
+            contactActivated={contactActivated}
+            activateContact={activateContact}
+          /> */}
+        </section>
+        <section className='row row-4'>OTHER</section>
       </section>
     );
   }
 }
 
 export default Rows;
+
+
+
+// {aboutActivated ?
+//   <section className='row row-1' onClick={() => {this.props.activateAbout()}}>
+//     <About
+//       aboutActivated={aboutActivated}
+//       activateAbout={activateAbout}
+//     />
+//   </section>
+// :
+//   <section className='row row-1' onClick={() => {this.props.activateAbout()}}>
+//     <About
+//       aboutActivated={aboutActivated}
+//       activateAbout={activateAbout}
+//     />
+//   </section>
+// }

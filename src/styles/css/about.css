@@ -1,7 +1,5 @@
-.About {
-  height: 80px;
-  width: 100%;
-  display: flex;
-  background: black; }
+.About-active {
+  opacity: 1;
+  transition: 0.5s; }
 
 /*# sourceMappingURL=about.css.map */

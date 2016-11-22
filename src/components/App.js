@@ -6,7 +6,10 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      navActivated: false
+      navActivated: false,
+      aboutActivated: false,
+      projectsActivated: false,
+      contactActivated: false,
     };
   }
 
@@ -16,15 +19,40 @@ class App extends Component {
     this.setState({navActivated: true})
   }
 
-  render() {
+  activateAbout(){
+    this.state.aboutActivated ?
+    this.setState({aboutActivated: false}) :
+    this.setState({aboutActivated: true})
+  }
 
-    const { navActivated } = this.state;
+  activateProjects(){
+    this.state.projectsActivated ?
+    this.setState({projectsActivated: false}) :
+    this.setState({projectsActivated: true})
+  }
+
+  activateContact(){
+    this.state.contactActivated ?
+    this.setState({contactActivated: false}) :
+    this.setState({contactActivated: true})
+  }
+
+  render() {
+    const { navActivated, aboutActivated, projectsActivated,
+      contactActivated, activateAbout, activateProjects, activateContact } = this.state;
     return (
       <div className="App">
         <Header activateNav={ () => { this.activateNav() }}
-        navActivated={navActivated} />
+          navActivated={navActivated} />
         <Main activateNav={ () => { this.activateNav() }}
-        navActivated={navActivated} />
+          navActivated={navActivated}
+          aboutActivated={aboutActivated}
+          activateAbout={() => {this.activateAbout()}}
+          projectsActivated={projectsActivated}
+          activateProjects={() => {this.activateProjects()}}
+          contactActivated={contactActivated}
+          activateContact={() => {this.activateContact()}}
+        />
       </div>
     );
   }
