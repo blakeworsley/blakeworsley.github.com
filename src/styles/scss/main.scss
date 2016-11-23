@@ -7,7 +7,6 @@
   left: 0;
   right: 0;
   margin: $margin-main;
-  background: #f2f2f2;
   box-shadow: inset 0 1px 5px 0 rgba(0,0,0,0.20);
   transition: $transition-main;
 }
@@ -34,4 +33,9 @@
   position: relative;
   height: 100%;
   overflow-y: scroll;
+}
+
+.maximize-main {
+  margin: $margin-main-maximized;
+  transition: $transition-main;
 }

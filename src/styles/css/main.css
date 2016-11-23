@@ -8,11 +8,11 @@ Error: Undefined variable: "$margin-main".
 7:   left: 0;
 8:   right: 0;
 9:   margin: $margin-main;
-10:   background: #f2f2f2;
-11:   box-shadow: inset 0 1px 5px 0 rgba(0,0,0,0.20);
-12:   transition: $transition-main;
-13: }
-14: 
+10:   box-shadow: inset 0 1px 5px 0 rgba(0,0,0,0.20);
+11:   transition: $transition-main;
+12: }
+13: 
+14: .Main-active {
 
 Backtrace:
 ./src/styles/scss/main.scss:9
@@ -68,4 +68,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$margin-main\".\A         on line 9 of ./src/styles/scss/main.scss\A \A 4:   height: auto;\A 5:   bottom: 0;\A 6:   top: 0;\A 7:   left: 0;\A 8:   right: 0;\A 9:   margin: $margin-main;\A 10:   background: #f2f2f2;\A 11:   box-shadow: inset 0 1px 5px 0 rgba(0,0,0,0.20);\A 12:   transition: $transition-main;\A 13: }\A 14: "; }
+  content: "Error: Undefined variable: \"$margin-main\".\A         on line 9 of ./src/styles/scss/main.scss\A \A 4:   height: auto;\A 5:   bottom: 0;\A 6:   top: 0;\A 7:   left: 0;\A 8:   right: 0;\A 9:   margin: $margin-main;\A 10:   box-shadow: inset 0 1px 5px 0 rgba(0,0,0,0.20);\A 11:   transition: $transition-main;\A 12: }\A 13: \A 14: .Main-active {"; }

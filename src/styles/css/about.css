@@ -1,18 +1,19 @@
 /*
 Error: Undefined variable: "$color-light".
-        on line 3 of ./src/styles/scss/about.scss
+        on line 4 of ./src/styles/scss/about.scss
 
 1: .About {
 2:   height: 100%;
-3:   background: $color-light;
-4:   display: flex;
-5: }
-6: 
-7: // .About-inactive {
-8: //   opacity: 0;
+3:   width: 100%;
+4:   background: $color-light;
+5:   display: flex;
+6:   flex-direction: column;
+7: }
+8: 
+9: .About-active {
 
 Backtrace:
-./src/styles/scss/about.scss:3
+./src/styles/scss/about.scss:4
 /Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/script/tree/variable.rb:49:in `_perform'
 /Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/script/tree/node.rb:58:in `perform'
 /Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:397:in `visit_prop'
@@ -65,4 +66,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$color-light\".\A         on line 3 of ./src/styles/scss/about.scss\A \A 1: .About {\A 2:   height: 100%;\A 3:   background: $color-light;\A 4:   display: flex;\A 5: }\A 6: \A 7: // .About-inactive {\A 8: //   opacity: 0;"; }
+  content: "Error: Undefined variable: \"$color-light\".\A         on line 4 of ./src/styles/scss/about.scss\A \A 1: .About {\A 2:   height: 100%;\A 3:   width: 100%;\A 4:   background: $color-light;\A 5:   display: flex;\A 6:   flex-direction: column;\A 7: }\A 8: \A 9: .About-active {"; }

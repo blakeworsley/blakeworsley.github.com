@@ -1,13 +1,10 @@
 .About {
   height: 100%;
+  width: 100%;
   background: $color-light;
   display: flex;
+  flex-direction: column;
 }
-
-// .About-inactive {
-//   opacity: 0;
-//   transition: 0.5s;
-// }
 
 .About-active {
   opacity: 1;
@@ -16,9 +13,29 @@
 
 .about-header {
   background-color: $color-lighter;
-  width: 100%;
   display: flex;
   align-items: center;
   padding: 10px;
   font-size: 0.4em;
+}
+
+.about-header:hover {
+  transition: $transition-main;
+  background: $color-base;
+}
+
+.back-to-home {
+  padding-right: 10px;
+  transition: $transition-main;
+}
+
+.about-header:hover .back-to-home {
+  padding-left: 5px;
+}
+
+.about-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
 }

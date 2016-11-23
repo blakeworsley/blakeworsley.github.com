@@ -1,21 +1,21 @@
 /*
-Error: Undefined variable: "$color-base".
-        on line 10 of ./src/styles/scss/header.scss
+Error: Undefined variable: "$font-main".
+        on line 9 of ./src/styles/scss/header.scss
 
-5:   width: 50px;
-6:   bottom: 0;
-7:   top: 0;
-8:   left: 0;
-9:   margin: 10px 0px;
-10:   background: $color-base;
-11:   font-family: $font-main;
-12:   font-size: 16px;
-13:   line-height: 30px;
-14:   overflow-y: scroll;
-15: }
+4:   width: 50px;
+5:   bottom: 0;
+6:   top: 0;
+7:   left: 0;
+8:   margin: 10px 0px;
+9:   font-family: $font-main;
+10:   font-size: 16px;
+11:   line-height: 30px;
+12:   overflow-y: scroll;
+13: }
+14: 
 
 Backtrace:
-./src/styles/scss/header.scss:10
+./src/styles/scss/header.scss:9
 /Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/script/tree/variable.rb:49:in `_perform'
 /Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/script/tree/node.rb:58:in `perform'
 /Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:397:in `visit_prop'
@@ -68,4 +68,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$color-base\".\A         on line 10 of ./src/styles/scss/header.scss\A \A 5:   width: 50px;\A 6:   bottom: 0;\A 7:   top: 0;\A 8:   left: 0;\A 9:   margin: 10px 0px;\A 10:   background: $color-base;\A 11:   font-family: $font-main;\A 12:   font-size: 16px;\A 13:   line-height: 30px;\A 14:   overflow-y: scroll;\A 15: }"; }
+  content: "Error: Undefined variable: \"$font-main\".\A         on line 9 of ./src/styles/scss/header.scss\A \A 4:   width: 50px;\A 5:   bottom: 0;\A 6:   top: 0;\A 7:   left: 0;\A 8:   margin: 10px 0px;\A 9:   font-family: $font-main;\A 10:   font-size: 16px;\A 11:   line-height: 30px;\A 12:   overflow-y: scroll;\A 13: }\A 14: "; }

@@ -1,5 +1,4 @@
 .Header {
-  display: block;
   position: absolute;
   height: auto;
   width: 50px;
@@ -7,7 +6,6 @@
   top: 0;
   left: 0;
   margin: 10px 0px;
-  background: $color-base;
   font-family: $font-main;
   font-size: 16px;
   line-height: 30px;
@@ -114,7 +112,7 @@
 .header-nav .unselected-nav:hover {
   margin-left: -10px;
   padding-left: 10px;
-  background-color: rgb(221, 248, 255);
+  background-color: $color-darker;
 }
 
 .selected-nav {
@@ -122,17 +120,7 @@
   pointer-events: none;
 }
 
-
-// .back-to-home {
-//   background-color: white;
-//   padding: 10px 6px 10px 6px;
-//   position: relative;
-//   top: 0;
-//   left: 0;
-//   border-radius: 50px;
-//   transition: $transition-main;
-// }
-//
-// .back-to-home:hover {
-//   background-color: rgb(180, 180, 180);
-// }
+.minimize-header {
+  visibility: hidden;
+  width: 0px;
+}

@@ -5,7 +5,8 @@ class Header extends Component {
     const { activateNav, navActivated, aboutActivated, projectsActivated,
       contactActivated, activateAbout, activateProjects, activateContact } = this.props;
     return (
-      <section className={`Header ${navActivated ? 'Header-active' : null}`}>
+      <section className={`Header ${navActivated ? 'Header-active' : null} ${
+        (aboutActivated || projectsActivated || contactActivated) ? 'minimize-header' : null}`}>
         {navActivated ?
           <img src='./img/arrow.svg' className='navigationImg' role='presentation'
             onClick={() => {activateNav()}} />

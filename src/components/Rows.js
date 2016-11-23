@@ -13,11 +13,14 @@ class Rows extends Component {
 
         <section className={`row row-1 ${aboutActivated ? 'row-active' : 'About-inactive'} ${(projectsActivated || contactActivated ) ? 'hide-row' : ''}`}>
           { (projectsActivated || contactActivated) ? null :
-            <About
-              aboutActivated={aboutActivated}
-              activateAbout={activateAbout}
-              activateHome={activateHome}
-            />
+            ( aboutActivated ?
+              <About
+                aboutActivated={aboutActivated}
+                activateAbout={activateAbout}
+                activateHome={activateHome}
+              />
+              : <h1 onClick={() => {activateAbout()}}>ABOUT</h1>
+            )
           }
         </section>
 

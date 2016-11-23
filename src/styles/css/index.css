@@ -50,8 +50,10 @@ table {
   max-height: 100%;
   max-width: 100%; }
 
+.component-active {
+  background-color: #262626; }
+
 .Header {
-  display: block;
   position: absolute;
   height: auto;
   width: 50px;
@@ -59,7 +61,6 @@ table {
   top: 0;
   left: 0;
   margin: 10px 0px;
-  background: white;
   font-family: Lato-Regular;
   font-size: 16px;
   line-height: 30px;
@@ -150,11 +151,15 @@ table {
 .header-nav .unselected-nav:hover {
   margin-left: -10px;
   padding-left: 10px;
-  background-color: #ddf8ff; }
+  background-color: #262626; }
 
 .selected-nav {
   color: #b4b4b4;
   pointer-events: none; }
+
+.minimize-header {
+  visibility: hidden;
+  width: 0px; }
 
 .Main {
   display: block;
@@ -165,7 +170,6 @@ table {
   left: 0;
   right: 0;
   margin: 10px 10px 10px 50px;
-  background: #f2f2f2;
   box-shadow: inset 0 1px 5px 0 rgba(0, 0, 0, 0.2);
   transition: 0.25s; }
 
@@ -189,6 +193,10 @@ table {
   position: relative;
   height: 100%;
   overflow-y: scroll; }
+
+.maximize-main {
+  margin: 10px;
+  transition: 0.25s; }
 
 .Rows {
   height: 100%;
@@ -242,6 +250,7 @@ table {
   height: 24.3vh;
   color: white;
   align-items: center;
+  justify-content: center;
   font-family: Lato-Regular;
   font-size: 3.5em;
   transition: 0.3s; }
@@ -293,8 +302,10 @@ table {
 
 .About {
   height: 100%;
+  width: 100%;
   background: #d9d9d9;
-  display: flex; }
+  display: flex;
+  flex-direction: column; }
 
 .About-active {
   opacity: 1;
@@ -302,15 +313,26 @@ table {
 
 .about-header {
   background-color: #ededed;
-  width: 100%;
   display: flex;
   align-items: center;
   padding: 10px;
   font-size: 0.4em; }
 
-.Start {
-  display: block;
-  height: 100vh;
-  background-color: #abe8ab; }
+.about-header:hover {
+  transition: 0.25s;
+  background: white; }
+
+.back-to-home {
+  padding-right: 10px;
+  transition: 0.25s; }
+
+.about-header:hover .back-to-home {
+  padding-left: 5px; }
+
+.about-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%; }
 
 /*# sourceMappingURL=index.css.map */
