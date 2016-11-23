@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import About from './About';
 import Projects from './Projects';
+import Contact from './Contact';
 
 class Rows extends Component {
   render() {
@@ -24,8 +25,7 @@ class Rows extends Component {
           }
         </section>
 
-        <section className={`row row-2 ${projectsActivated ? 'row-active' : 'Projects-inactive'} ${(aboutActivated || contactActivated ) ? 'hide-row' : ''}`}
-          onClick={() => {activateProjects()}}>
+        <section className={`row row-2 ${projectsActivated ? 'row-active' : 'Projects-inactive'} ${(aboutActivated || contactActivated ) ? 'hide-row' : ''}`}>
           { (aboutActivated || contactActivated) ? null :
             ( projectsActivated ?
               <Projects
@@ -33,20 +33,22 @@ class Rows extends Component {
                 activateProjects={activateProjects}
                 activateHome={activateHome}
               />
-              : <h1>PROJECTS</h1>
+              : <h1 onClick={() => {activateProjects()}}>PROJECTS</h1>
             )
           }
         </section>
 
-        <section className={`row row-3 ${contactActivated ? 'row-active' : 'Contact-inactive'} ${(aboutActivated || projectsActivated ) ? 'hide-row' : ''}`}
-          onClick={() => {activateContact()}}>
-          { (aboutActivated || projectsActivated) ? null :
-            <h1>CONTACT</h1>
+        <section className={`row row-3 ${contactActivated ? 'row-active' : 'Contact-inactive'} ${(aboutActivated || projectsActivated ) ? 'hide-row' : ''}`}>
+           { (aboutActivated || projectsActivated) ? null :
+            ( contactActivated ?
+              <Contact
+                contactActivated={contactActivated}
+                activateContact={activateContact}
+                activateHome={activateHome}
+              />
+              : <h1 onClick={() => {activateContact()}}>CONTACT</h1>
+            )
           }
-          {/* <Contact
-            contactActivated={contactActivated}
-            activateContact={activateContact}
-          /> */}
         </section>
       </section>
     );
@@ -54,3 +56,28 @@ class Rows extends Component {
 }
 
 export default Rows;
+
+
+
+// { (aboutActivated || projectsActivated) ? null :
+//   ( contactActivated ?
+//     <Contact
+//       contactActivated={contactActivated}
+//       activateContact={activateContact}
+//       activateHome={activateHome}
+//     />
+//     : <h1 onClick={() => {activateContact()}}>CONTACT</h1>
+//   )
+// }
+
+
+
+{/* <section className={`row row-3 ${contactActivated ? 'row-active' : 'Contact-inactive'} ${(aboutActivated || projectsActivated ) ? 'hide-row' : ''}`}
+  onClick={() => {activateContact()}}>
+  { (aboutActivated || projectsActivated) ? null :
+    <h1>CONTACT</h1>
+  }
+  {/* <Contact
+    contactActivated={contactActivated}
+    activateContact={activateContact}
+  /> */}
