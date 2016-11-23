@@ -1,21 +1,19 @@
 /*
 Error: Undefined variable: "$color-light".
-        on line 31 of ./src/styles/scss/projects.scss
+        on line 4 of ./src/styles/scss/fullscreen.scss
 
-26:   background: rgb(52, 52, 52);
-27:   overflow: hidden;
-28:   z-index: 3;
-29: }
-30: .project-1 {
-31:   background: $color-light;
-32: }
-33: .project-2 {
-34:   background: $color-light-medium;
-35: }
-36: .project-3 {
+1: .component-full-screen {
+2:   height: 100%;
+3:   width: 100%;
+4:   background: $color-light;
+5:   display: flex;
+6:   flex-direction: column;
+7: }
+8: 
+9: .component-full-screen-active {
 
 Backtrace:
-./src/styles/scss/projects.scss:31
+./src/styles/scss/fullscreen.scss:4
 /Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/script/tree/variable.rb:49:in `_perform'
 /Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/script/tree/node.rb:58:in `perform'
 /Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:397:in `visit_prop'
@@ -68,4 +66,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$color-light\".\A         on line 31 of ./src/styles/scss/projects.scss\A \A 26:   background: rgb(52, 52, 52);\A 27:   overflow: hidden;\A 28:   z-index: 3;\A 29: }\A 30: .project-1 {\A 31:   background: $color-light;\A 32: }\A 33: .project-2 {\A 34:   background: $color-light-medium;\A 35: }\A 36: .project-3 {"; }
+  content: "Error: Undefined variable: \"$color-light\".\A         on line 4 of ./src/styles/scss/fullscreen.scss\A \A 1: .component-full-screen {\A 2:   height: 100%;\A 3:   width: 100%;\A 4:   background: $color-light;\A 5:   display: flex;\A 6:   flex-direction: column;\A 7: }\A 8: \A 9: .component-full-screen-active {"; }

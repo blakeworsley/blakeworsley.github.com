@@ -27,12 +27,15 @@ class Rows extends Component {
         <section className={`row row-2 ${projectsActivated ? 'row-active' : 'Projects-inactive'} ${(aboutActivated || contactActivated ) ? 'hide-row' : ''}`}
           onClick={() => {activateProjects()}}>
           { (aboutActivated || contactActivated) ? null :
-            <h1>PROJECTS</h1>
+            ( projectsActivated ?
+              <Projects
+                projectsActivated={projectsActivated}
+                activateProjects={activateProjects}
+                activateHome={activateHome}
+              />
+              : <h1>PROJECTS</h1>
+            )
           }
-          {/* <Projects
-            projectsActivated={projectsActivated}
-            activateProjects={activateProjects}
-          /> */}
         </section>
 
         <section className={`row row-3 ${contactActivated ? 'row-active' : 'Contact-inactive'} ${(aboutActivated || projectsActivated ) ? 'hide-row' : ''}`}

@@ -199,7 +199,42 @@ table {
   margin: 10px;
   transition: 0.25s; }
 
-.Rows {
+.component-full-screen {
+  height: 100%;
+  width: 100%;
+  background: #d9d9d9;
+  display: flex;
+  flex-direction: column; }
+
+.component-full-screen-active {
+  opacity: 1;
+  transition: 0.5s; }
+
+.component-full-screen-header {
+  background-color: #ededed;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  font-size: 0.4em; }
+
+.component-full-screen-header:hover {
+  transition: 0.25s;
+  background: white; }
+
+.back-to-home {
+  padding-right: 10px;
+  transition: 0.25s; }
+
+.component-full-screen-header:hover .back-to-home {
+  padding-left: 5px; }
+
+.component-full-screen-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%; }
+
+.Projects {
   height: 100%;
   width: 100%;
   display: flex;
@@ -210,36 +245,35 @@ table {
   justify-content: center;
   align-items: center;
   width: 25%;
-  height: 24.3vh;
+  height: 25%;
   color: #fff;
   font-family: Lato-Regular;
   transition: 0.3s; }
 
 .project {
   opacity: 0;
-  font-size: 1.1em;
+  font-size: 0.5em;
   transition: 0.3s; }
 
 .project-container:hover .project {
-  opacity: 1;
-  font-size: 1.2em; }
+  opacity: 1; }
 
 .project-container:hover {
   background: #343434;
   overflow: hidden;
   z-index: 3; }
 
-.row-1 {
-  background: #ebebeb; }
+.project-1 {
+  background: #d9d9d9; }
 
-.row-2 {
-  background: #c9c9c9; }
+.project-2 {
+  background: #b3b3b3; }
 
-.row-3 {
-  background: #a8a8a8; }
+.project-3 {
+  background: #8c8c8c; }
 
-.row-4 {
-  background: #8b8b8b; }
+.project-4 {
+  background: #666666; }
 
 .Rows {
   width: 100%;
@@ -261,33 +295,14 @@ table {
   background: #d9d9d9;
   transition: 0.2s; }
 
-.row-1:hover {
-  color: #404040;
-  transition: 0.2s; }
-
 .row-2 {
   background: #b3b3b3; }
-
-.row-2:hover {
-  color: #404040;
-  opacity: 0.8;
-  transition: 0.2s; }
 
 .row-3 {
   background: #8c8c8c; }
 
-.row-3:hover {
-  color: #404040;
-  opacity: 0.7;
-  transition: 0.2s; }
-
 .row-4 {
   background: #666666; }
-
-.row-4:hover {
-  color: #404040;
-  opacity: 0.6;
-  transition: 0.2s; }
 
 .row-active {
   width: 100%;
@@ -300,40 +315,5 @@ table {
   height: 0;
   opacity: 0;
   visibility: hidden; }
-
-.About {
-  height: 100%;
-  width: 100%;
-  background: #d9d9d9;
-  display: flex;
-  flex-direction: column; }
-
-.About-active {
-  opacity: 1;
-  transition: 0.5s; }
-
-.about-header {
-  background-color: #ededed;
-  display: flex;
-  align-items: center;
-  padding: 10px;
-  font-size: 0.4em; }
-
-.about-header:hover {
-  transition: 0.25s;
-  background: white; }
-
-.back-to-home {
-  padding-right: 10px;
-  transition: 0.25s; }
-
-.about-header:hover .back-to-home {
-  padding-left: 5px; }
-
-.about-content {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%; }
 
 /*# sourceMappingURL=index.css.map */

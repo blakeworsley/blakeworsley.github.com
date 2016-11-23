@@ -21,48 +21,48 @@
   transition : 0.2s;
 }
 
-.row-1:hover {
-  // background: url(../../../public/img/steamboat-barn.jpg) no-repeat fixed;
-  // background-size: cover;
-  color      : $color-dark;
-  transition : 0.2s;
-}
+// .row-1:hover {
+//   // background: url(../../../public/img/steamboat-barn.jpg) no-repeat fixed;
+//   // background-size: cover;
+//   color      : $color-dark;
+//   transition : 0.2s;
+// }
 
 .row-2 {
   background : $color-light-medium;
 }
 
-.row-2:hover {
-  // background: url(../../../public/img/arch.jpg) no-repeat fixed;
-  // background-size: cover;
-  color      : $color-dark;
-  opacity    : 0.8;
-  transition : 0.2s;
-}
+// .row-2:hover {
+//   // background: url(../../../public/img/arch.jpg) no-repeat fixed;
+//   // background-size: cover;
+//   color      : $color-dark;
+//   opacity    : 0.8;
+//   transition : 0.2s;
+// }
 
 .row-3 {
   background : $color-medium;
 }
 
-.row-3:hover {
-  // background: url(../../../public/img/steamboat-barn.jpg) no-repeat fixed;
-  // background-size: cover;
-  color      : $color-dark;
-  opacity    : 0.7;
-  transition : 0.2s;
-}
+// .row-3:hover {
+//   // background: url(../../../public/img/steamboat-barn.jpg) no-repeat fixed;
+//   // background-size: cover;
+//   color      : $color-dark;
+//   opacity    : 0.7;
+//   transition : 0.2s;
+// }
 
 .row-4 {
   background : $color-medium-dark;
 }
 
-.row-4:hover {
-  // background: url(../../../public/img/steamboat-barn.jpg) no-repeat fixed;
-  // background-size: cover;
-  color      : $color-dark;
-  opacity    : 0.6;
-  transition : 0.2s;
-}
+// .row-4:hover {
+//   // background: url(../../../public/img/steamboat-barn.jpg) no-repeat fixed;
+//   // background-size: cover;
+//   color      : $color-dark;
+//   opacity    : 0.6;
+//   transition : 0.2s;
+// }
 
 .row-active {
   width       : 100%;
