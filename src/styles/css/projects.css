@@ -1,21 +1,21 @@
 /*
 Error: Undefined variable: "$color-light".
-        on line 31 of ./src/styles/scss/projects.scss
+        on line 36 of ./src/styles/scss/projects.scss
 
-26:   background: rgb(52, 52, 52);
-27:   overflow: hidden;
-28:   z-index: 3;
-29: }
-30: .project-1 {
-31:   background: $color-light;
-32: }
-33: .project-2 {
-34:   background: $color-light-medium;
-35: }
-36: .project-3 {
+31:   z-index: 3;
+32:   background: url(../../../public/img/steamboat-barn.jpg) no-repeat fixed;
+33:   background-size: cover;
+34: }
+35: .project-1 {
+36:   background: $color-light;
+37: }
+38: .project-2 {
+39:   background: $color-light-medium;
+40: }
+41: .project-3 {
 
 Backtrace:
-./src/styles/scss/projects.scss:31
+./src/styles/scss/projects.scss:36
 /Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/script/tree/variable.rb:49:in `_perform'
 /Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/script/tree/node.rb:58:in `perform'
 /Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:397:in `visit_prop'
@@ -68,4 +68,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$color-light\".\A         on line 31 of ./src/styles/scss/projects.scss\A \A 26:   background: rgb(52, 52, 52);\A 27:   overflow: hidden;\A 28:   z-index: 3;\A 29: }\A 30: .project-1 {\A 31:   background: $color-light;\A 32: }\A 33: .project-2 {\A 34:   background: $color-light-medium;\A 35: }\A 36: .project-3 {"; }
+  content: "Error: Undefined variable: \"$color-light\".\A         on line 36 of ./src/styles/scss/projects.scss\A \A 31:   z-index: 3;\A 32:   background: url(../../../public/img/steamboat-barn.jpg) no-repeat fixed;\A 33:   background-size: cover;\A 34: }\A 35: .project-1 {\A 36:   background: $color-light;\A 37: }\A 38: .project-2 {\A 39:   background: $color-light-medium;\A 40: }\A 41: .project-3 {"; }
