@@ -14,13 +14,6 @@
   transition  : 0.3s;
 }
 
-.row:hover {
-  z-index   : 3;
-  opacity   : 1;
-  overflow  : hidden;
-  font-size : 3.6em;
-}
-
 .row-1 {
   height     : 48.6vh;
   background : $color-light;
@@ -71,19 +64,17 @@
 }
 
 .row-active {
-  display     : flex;
   width       : 100%;
   height      : 100%;
   color       : $color-dark;
   align-items : flex-start;
   transition  : 0.3s;
-  transition  : 0.2s;
   // background: url(../../../public/img/steamboat-barn.jpg) no-repeat fixed;
   // background-size: cover;
 }
 
 .hide-row {
-  visibility : hidden;
   height     : 0;
   opacity    : 0;
+  visibility : hidden;
 }

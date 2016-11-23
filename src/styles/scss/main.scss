@@ -6,14 +6,14 @@
   top: 0;
   left: 0;
   right: 0;
-  margin: 10px 10px 10px 50px;
+  margin: $margin-main;
   background: #f2f2f2;
   box-shadow: inset 0 1px 5px 0 rgba(0,0,0,0.20);
   transition: $transition-main;
 }
 
 .Main-active {
-  margin: 20px 20px 20px 300px;
+  margin: $margin-main-selected;
 }
 
 .main-fade-out {
@@ -31,8 +31,7 @@
 }
 
 .main-container {
-  display: flex;
-  flex-direction: column;
+  position: relative;
   height: 100%;
   overflow-y: scroll;
 }

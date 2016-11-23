@@ -59,39 +59,52 @@ table {
   top: 0;
   left: 0;
   margin: 10px 0px;
-  background: #fff;
+  background: white;
   font-family: Lato-Regular;
   font-size: 16px;
   line-height: 30px;
-  overflow-y: scroll;
-  transition: 0.25s; }
+  overflow-y: scroll; }
 
 .header-title {
-  margin-top: 450px;
   letter-spacing: 0.1em;
-  white-space: nowrap;
-  transition-delay: 2s;
-  transition: 0.25s;
+  position: fixed;
+  top: 280px;
+  left: -165px;
+  transition: 0.5s;
   transform: rotate(270deg);
   -webkit-transform: rotate(270deg);
   -moz-transform: rotate(270deg);
   -o-transform: rotate(270deg);
   -ms-transform: rotate(270deg); }
 
+.header-title-inactive {
+  opacity: 0;
+  left: -200px; }
+
 .header-title-span {
   color: #959595;
   padding: 0px 20px; }
 
+.header-aside {
+  position: absolute;
+  top: 150px;
+  width: 300px;
+  opacity: 0;
+  visibility: hidden; }
+
+.header-aside-active {
+  top: 50px;
+  opacity: 1;
+  transition: 0.25s;
+  visibility: visible; }
+
 .Header-active {
   width: 300px;
-  text-align: left;
-  transition: 0.25s; }
+  text-align: left; }
 
 .header-nav {
   color: #4A4A4A;
-  padding: 50px 50px 25px 50px;
-  transition-delay: 5s;
-  transition: 2s; }
+  padding: 25px 50px 25px 50px; }
 
 .header-bio {
   padding: 25px 50px; }
@@ -106,7 +119,8 @@ table {
   margin-top: 11px;
   margin-left: 10px;
   position: fixed;
-  transition: 0.2s; }
+  transition: 0.2s;
+  z-index: 1; }
 
 .Header .navigationImg:hover {
   transform: scale(1.1);
@@ -118,9 +132,6 @@ table {
 
 .header-logo {
   display: block;
-  position: absolute;
-  bottom: 0;
-  margin: auto;
   padding: 10px 106px; }
 
 .selectedArrow {
@@ -175,8 +186,7 @@ table {
   z-index: 2; }
 
 .main-container {
-  display: flex;
-  flex-direction: column;
+  position: relative;
   height: 100%;
   overflow-y: scroll; }
 
@@ -236,12 +246,6 @@ table {
   font-size: 3.5em;
   transition: 0.3s; }
 
-.row:hover {
-  z-index: 3;
-  opacity: 1;
-  overflow: hidden;
-  font-size: 3.6em; }
-
 .row-1 {
   height: 48.6vh;
   background: #d9d9d9;
@@ -276,18 +280,16 @@ table {
   transition: 0.2s; }
 
 .row-active {
-  display: flex;
   width: 100%;
   height: 100%;
   color: #404040;
   align-items: flex-start;
-  transition: 0.3s;
-  transition: 0.2s; }
+  transition: 0.3s; }
 
 .hide-row {
-  visibility: hidden;
   height: 0;
-  opacity: 0; }
+  opacity: 0;
+  visibility: hidden; }
 
 .About {
   height: 100%;

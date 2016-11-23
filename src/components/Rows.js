@@ -12,16 +12,20 @@ class Rows extends Component {
       <section className='Rows'>
 
         <section className={`row row-1 ${aboutActivated ? 'row-active' : 'About-inactive'} ${(projectsActivated || contactActivated ) ? 'hide-row' : ''}`}>
-          <About
-            aboutActivated={aboutActivated}
-            activateAbout={activateAbout}
-            activateHome={activateHome}
-          />
+          { (projectsActivated || contactActivated) ? null :
+            <About
+              aboutActivated={aboutActivated}
+              activateAbout={activateAbout}
+              activateHome={activateHome}
+            />
+          }
         </section>
 
         <section className={`row row-2 ${projectsActivated ? 'row-active' : 'Projects-inactive'} ${(aboutActivated || contactActivated ) ? 'hide-row' : ''}`}
           onClick={() => {activateProjects()}}>
-          PROJECTS
+          { (aboutActivated || contactActivated) ? null :
+            <h1>PROJECTS</h1>
+          }
           {/* <Projects
             projectsActivated={projectsActivated}
             activateProjects={activateProjects}
@@ -30,7 +34,9 @@ class Rows extends Component {
 
         <section className={`row row-3 ${contactActivated ? 'row-active' : 'Contact-inactive'} ${(aboutActivated || projectsActivated ) ? 'hide-row' : ''}`}
           onClick={() => {activateContact()}}>
-          CONTACT
+          { (aboutActivated || projectsActivated) ? null :
+            <h1>CONTACT</h1>
+          }
           {/* <Contact
             contactActivated={contactActivated}
             activateContact={activateContact}
@@ -42,21 +48,3 @@ class Rows extends Component {
 }
 
 export default Rows;
-
-
-
-// {aboutActivated ?
-//   <section className='row row-1' onClick={() => {this.props.activateAbout()}}>
-//     <About
-//       aboutActivated={aboutActivated}
-//       activateAbout={activateAbout}
-//     />
-//   </section>
-// :
-//   <section className='row row-1' onClick={() => {this.props.activateAbout()}}>
-//     <About
-//       aboutActivated={aboutActivated}
-//       activateAbout={activateAbout}
-//     />
-//   </section>
-// }

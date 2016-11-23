@@ -7,20 +7,19 @@
   top: 0;
   left: 0;
   margin: 10px 0px;
-  background: #fff;
-  font-family: Lato-Regular;
+  background: $color-base;
+  font-family: $font-main;
   font-size: 16px;
   line-height: 30px;
   overflow-y: scroll;
-  transition: $transition-main;
 }
 
 .header-title {
-  margin-top: 450px;
   letter-spacing: 0.1em;
-  white-space: nowrap;
-  transition-delay: 2s;
-  transition: $transition-main;
+  position: fixed;
+  top: 280px;
+  left: -165px;
+  transition: 0.5s;
   transform: rotate(270deg);
   -webkit-transform: rotate(270deg);
   -moz-transform: rotate(270deg);
@@ -28,22 +27,39 @@
   -ms-transform: rotate(270deg);
 }
 
+.header-title-inactive {
+  opacity: 0;
+  left: -200px;
+}
+
 .header-title-span {
   color: rgb(149, 149, 149);
   padding: 0px 20px;
 }
 
+.header-aside {
+  position: absolute;
+  top: 150px;
+  width: 300px;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.header-aside-active {
+  top: 50px;
+  opacity: 1;
+  transition: $transition-main;
+  visibility: visible;
+}
+
 .Header-active {
   width: 300px;
   text-align: left;
-  transition: $transition-main;
 }
 
 .header-nav {
   color: #4A4A4A;
-  padding: 50px 50px 25px 50px;
-  transition-delay: 5s;
-  transition: 2s;
+  padding: 25px 50px 25px 50px;
 }
 
 .header-bio {
@@ -63,6 +79,7 @@
   margin-left: 10px;
   position: fixed;
   transition: 0.2s;
+  z-index: 1;
 }
 
 .Header .navigationImg:hover {
@@ -76,9 +93,6 @@
 
 .header-logo {
   display: block;
-  position: absolute;
-  bottom: 0;
-  margin: auto;
   padding: 10px 106px;
 }
 
@@ -107,6 +121,7 @@
   color: rgb(180, 180, 180);
   pointer-events: none;
 }
+
 
 // .back-to-home {
 //   background-color: white;
