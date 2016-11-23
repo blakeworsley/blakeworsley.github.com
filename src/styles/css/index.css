@@ -71,7 +71,7 @@ table {
   position: fixed;
   top: 280px;
   left: -165px;
-  transition: 0.5s;
+  transition: 0.25s;
   transform: rotate(270deg);
   -webkit-transform: rotate(270deg);
   -moz-transform: rotate(270deg);
@@ -120,7 +120,7 @@ table {
   margin-top: 11px;
   margin-left: 10px;
   position: fixed;
-  transition: 0.2s;
+  transition: 0.25s;
   z-index: 1; }
 
 .Header .navigationImg:hover {
@@ -129,7 +129,7 @@ table {
   -moz-transform: scale(1.1);
   -o-transform: scale(1.1);
   -ms-transform: scale(1.1);
-  transition: 0.2s; }
+  transition: 0.25s; }
 
 .header-logo {
   display: block;
@@ -137,7 +137,7 @@ table {
 
 .selectedArrow {
   opacity: 0;
-  transition: 0.2s; }
+  transition: 0.25s; }
 
 .header-nav .unselected-nav:hover .selectedArrow {
   opacity: 1;
@@ -159,7 +159,8 @@ table {
 
 .minimize-header {
   visibility: hidden;
-  width: 0px; }
+  width: 0px;
+  opacity: 0; }
 
 .Main {
   display: block;
