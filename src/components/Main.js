@@ -1,24 +1,32 @@
 import React, { Component } from 'react';
 import Projects from './Projects';
-import Start from './Start';
-import About from './About';
+import Rows from './Rows';
 
 class Main extends Component {
-
   render() {
+    const { navActivated, activateNav, aboutActivated,
+      projectsActivated, contactActivated, activateAbout,
+      activateProjects, activateContact, activateHome } = this.props;
     return (
-      <section className={`Main ${this.props.navActivated ? 'Main-active' : null}`}>
-        {this.props.navActivated ?
-          <div className='main-fade-out'
-            onClick={() => {this.props.activateNav()}}></div>
-          :
-          null
-        }
+      <section className={`Main ${navActivated ? 'Main-active' : null} ${
+        (aboutActivated || projectsActivated || contactActivated) ? 'maximize-main' : null}`}>
         <section className='main-container'>
-          <Start />
-          <Projects />
-          <About />
-          {/* <img src='./img/logo-art.svg' role='presentation'/> */}
+          {navActivated ?
+            <div className='main-fade-out'
+              onClick={() => {activateNav()}}></div>
+            :
+            null
+          }
+          <Rows
+            navActivated={navActivated}
+            aboutActivated={aboutActivated}
+            activateAbout={activateAbout}
+            projectsActivated={projectsActivated}
+            activateProjects={activateProjects}
+            contactActivated={contactActivated}
+            activateContact={activateContact}
+            activateHome={activateHome}
+          />
         </section>
       </section>
     );

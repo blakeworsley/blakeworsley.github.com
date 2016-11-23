@@ -50,8 +50,10 @@ table {
   max-height: 100%;
   max-width: 100%; }
 
+.component-active {
+  background-color: #262626; }
+
 .Header {
-  display: block;
   position: absolute;
   height: auto;
   width: 50px;
@@ -59,39 +61,51 @@ table {
   top: 0;
   left: 0;
   margin: 10px 0px;
-  background: #fff;
   font-family: Lato-Regular;
   font-size: 16px;
   line-height: 30px;
-  overflow-y: scroll;
-  transition: 0.25s; }
+  overflow-y: scroll; }
 
 .header-title {
-  margin-top: 450px;
   letter-spacing: 0.1em;
-  white-space: nowrap;
-  transition-delay: 2s;
-  transition: 0.25s;
+  position: fixed;
+  top: 280px;
+  left: -165px;
+  transition: 0.5s;
   transform: rotate(270deg);
   -webkit-transform: rotate(270deg);
   -moz-transform: rotate(270deg);
   -o-transform: rotate(270deg);
   -ms-transform: rotate(270deg); }
 
+.header-title-inactive {
+  opacity: 0;
+  left: -200px; }
+
 .header-title-span {
   color: #959595;
   padding: 0px 20px; }
 
+.header-aside {
+  position: absolute;
+  top: 150px;
+  width: 300px;
+  opacity: 0;
+  visibility: hidden; }
+
+.header-aside-active {
+  top: 50px;
+  opacity: 1;
+  transition: 0.25s;
+  visibility: visible; }
+
 .Header-active {
   width: 300px;
-  text-align: left;
-  transition: 0.25s; }
+  text-align: left; }
 
 .header-nav {
   color: #4A4A4A;
-  padding: 50px 50px 25px 50px;
-  transition-delay: 5s;
-  transition: 2s; }
+  padding: 25px 50px 25px 50px; }
 
 .header-bio {
   padding: 25px 50px; }
@@ -103,9 +117,11 @@ table {
   font-size: 20px; }
 
 .Header .navigationImg {
+  margin-top: 11px;
   margin-left: 10px;
   position: fixed;
-  transition: 0.2s; }
+  transition: 0.2s;
+  z-index: 1; }
 
 .Header .navigationImg:hover {
   transform: scale(1.1);
@@ -117,16 +133,13 @@ table {
 
 .header-logo {
   display: block;
-  position: absolute;
-  bottom: 0;
-  margin: auto;
   padding: 10px 106px; }
 
 .selectedArrow {
   opacity: 0;
   transition: 0.2s; }
 
-.header-nav h2:hover .selectedArrow {
+.header-nav .unselected-nav:hover .selectedArrow {
   opacity: 1;
   transform: translateX(10px);
   -webkit-transform: translateX(10px);
@@ -135,10 +148,18 @@ table {
   -ms-transform: translateX(10px);
   padding-right: 10px; }
 
-.header-nav h2:hover {
+.header-nav .unselected-nav:hover {
   margin-left: -10px;
   padding-left: 10px;
-  background-color: yellow; }
+  background-color: #262626; }
+
+.selected-nav {
+  color: #b4b4b4;
+  pointer-events: none; }
+
+.minimize-header {
+  visibility: hidden;
+  width: 0px; }
 
 .Main {
   display: block;
@@ -149,7 +170,6 @@ table {
   left: 0;
   right: 0;
   margin: 10px 10px 10px 50px;
-  background: #f2f2f2;
   box-shadow: inset 0 1px 5px 0 rgba(0, 0, 0, 0.2);
   transition: 0.25s; }
 
@@ -170,12 +190,15 @@ table {
   z-index: 2; }
 
 .main-container {
-  display: flex;
-  flex-direction: column;
+  position: relative;
   height: 100%;
   overflow-y: scroll; }
 
-.Projects {
+.maximize-main {
+  margin: 10px;
+  transition: 0.25s; }
+
+.Rows {
   height: 100%;
   width: 100%;
   display: flex;
@@ -217,10 +240,99 @@ table {
 .row-4 {
   background: #8b8b8b; }
 
-.About {
-  height: 80px;
+.Rows {
   width: 100%;
+  height: 100%; }
+
+.row {
   display: flex;
-  background: black; }
+  width: 100%;
+  height: 24.3vh;
+  color: white;
+  align-items: center;
+  justify-content: center;
+  font-family: Lato-Regular;
+  font-size: 3.5em;
+  transition: 0.3s; }
+
+.row-1 {
+  height: 48.6vh;
+  background: #d9d9d9;
+  transition: 0.2s; }
+
+.row-1:hover {
+  color: #404040;
+  transition: 0.2s; }
+
+.row-2 {
+  background: #b3b3b3; }
+
+.row-2:hover {
+  color: #404040;
+  opacity: 0.8;
+  transition: 0.2s; }
+
+.row-3 {
+  background: #8c8c8c; }
+
+.row-3:hover {
+  color: #404040;
+  opacity: 0.7;
+  transition: 0.2s; }
+
+.row-4 {
+  background: #666666; }
+
+.row-4:hover {
+  color: #404040;
+  opacity: 0.6;
+  transition: 0.2s; }
+
+.row-active {
+  width: 100%;
+  height: 100%;
+  color: #404040;
+  align-items: flex-start;
+  transition: 0.3s; }
+
+.hide-row {
+  height: 0;
+  opacity: 0;
+  visibility: hidden; }
+
+.About {
+  height: 100%;
+  width: 100%;
+  background: #d9d9d9;
+  display: flex;
+  flex-direction: column; }
+
+.About-active {
+  opacity: 1;
+  transition: 0.5s; }
+
+.about-header {
+  background-color: #ededed;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  font-size: 0.4em; }
+
+.about-header:hover {
+  transition: 0.25s;
+  background: white; }
+
+.back-to-home {
+  padding-right: 10px;
+  transition: 0.25s; }
+
+.about-header:hover .back-to-home {
+  padding-left: 5px; }
+
+.about-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%; }
 
 /*# sourceMappingURL=index.css.map */

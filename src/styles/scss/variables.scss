@@ -1,0 +1,35 @@
+// COLOR
+$color-base: white;
+$color-lighter: darken($color-base, 7);
+$color-light: darken($color-base, 15);
+$color-light-medium: darken($color-base, 30);
+$color-medium: darken($color-base, 45);
+$color-medium-dark: darken($color-base, 60);
+$color-dark: darken($color-base, 75);
+$color-darker: darken($color-base, 85);
+
+
+// FONT
+$font-main: Lato-Regular;
+
+
+// GRADIENTS
+
+
+// MARGINS
+$margin-main: 10px 10px 10px 50px;
+$margin-main-maximized: 10px;
+$margin-main-selected: 20px 20px 20px 300px;
+
+// IMGS
+
+
+
+// MIXINS
+
+
+
+
+//EFFECTS
+
+$transition-main: 0.25s;

@@ -1,5 +1,4 @@
 .Header {
-  display: block;
   position: absolute;
   height: auto;
   width: 50px;
@@ -7,20 +6,18 @@
   top: 0;
   left: 0;
   margin: 10px 0px;
-  background: #fff;
-  font-family: Lato-Regular;
+  font-family: $font-main;
   font-size: 16px;
   line-height: 30px;
   overflow-y: scroll;
-  transition: 0.25s;
 }
 
 .header-title {
-  margin-top: 450px;
   letter-spacing: 0.1em;
-  white-space: nowrap;
-  transition-delay: 2s;
-  transition: 0.25s;
+  position: fixed;
+  top: 280px;
+  left: -165px;
+  transition: 0.5s;
   transform: rotate(270deg);
   -webkit-transform: rotate(270deg);
   -moz-transform: rotate(270deg);
@@ -28,22 +25,39 @@
   -ms-transform: rotate(270deg);
 }
 
+.header-title-inactive {
+  opacity: 0;
+  left: -200px;
+}
+
 .header-title-span {
   color: rgb(149, 149, 149);
   padding: 0px 20px;
 }
 
+.header-aside {
+  position: absolute;
+  top: 150px;
+  width: 300px;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.header-aside-active {
+  top: 50px;
+  opacity: 1;
+  transition: $transition-main;
+  visibility: visible;
+}
+
 .Header-active {
   width: 300px;
   text-align: left;
-  transition: 0.25s;
 }
 
 .header-nav {
   color: #4A4A4A;
-  padding: 50px 50px 25px 50px;
-  transition-delay: 5s;
-  transition: 2s;
+  padding: 25px 50px 25px 50px;
 }
 
 .header-bio {
@@ -59,9 +73,11 @@
 }
 
 .Header .navigationImg {
+  margin-top: 11px;
   margin-left: 10px;
   position: fixed;
   transition: 0.2s;
+  z-index: 1;
 }
 
 .Header .navigationImg:hover {
@@ -75,9 +91,6 @@
 
 .header-logo {
   display: block;
-  position: absolute;
-  bottom: 0;
-  margin: auto;
   padding: 10px 106px;
 }
 
@@ -86,7 +99,7 @@
   transition: 0.2s;
 }
 
-.header-nav h2:hover .selectedArrow{
+.header-nav .unselected-nav:hover .selectedArrow{
   opacity: 1;
   transform: translateX(10px);
   -webkit-transform: translateX(10px);
@@ -96,8 +109,18 @@
   padding-right: 10px;
 }
 
-.header-nav h2:hover {
+.header-nav .unselected-nav:hover {
   margin-left: -10px;
   padding-left: 10px;
-  background-color: rgb(256, 256, 0);
+  background-color: $color-darker;
+}
+
+.selected-nav {
+  color: rgb(180, 180, 180);
+  pointer-events: none;
+}
+
+.minimize-header {
+  visibility: hidden;
+  width: 0px;
 }
