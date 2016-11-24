@@ -35,7 +35,7 @@
 
 .computer-app-selection {
   @include flex-center;
-  height: 10%;
+  margin-top: auto;
   width: 80%;
   background: $color-lighter;
   opacity: 0.8;
@@ -46,7 +46,7 @@
     @include flex-center;
     flex-wrap: wrap;
     height: 95%;
-    padding: 0 5px 0 5px;
+    padding: 5px;
     margin: 5px;
     border-radius: 2px;
     background: $color-light-medium;
@@ -67,6 +67,7 @@
     height: 100%;
     border-radius: 0px;
     margin-top: 0px;
+    @include shadow-main-outer;
     nav {
       border-radius: 0px;
     }
