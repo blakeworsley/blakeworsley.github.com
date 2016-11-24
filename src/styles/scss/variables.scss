@@ -29,9 +29,16 @@ $margin-main-selected: 20px 20px 20px 300px;
 
 // MIXINS
 
-
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 
 //EFFECTS
 
 $transition-main: 0.25s;
+$transition-fast: 0.1s;
+$transition-medium: 2s;
+$transition-slow: 2s;

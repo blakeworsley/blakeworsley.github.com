@@ -1,24 +1,24 @@
 /*
-Error: Undefined variable: "$color-main-vibrant".
-        on line 15 of ./src/styles/scss/projects.scss
+Error: Undefined mixin 'flex-center'.
+        on line 2 of ./src/styles/scss/projects.scss, in `flex-center'
+        from line 2 of ./src/styles/scss/projects.scss
 
-10:   display: flex;
-11:   justify-content: center;
-12:   align-items: center;
-13:   width: 25%;
-14:   height: 25%;
-15:   color: $color-main-vibrant;
-16:   font-family: Lato-Regular;
-17:   transition: 2s ease-in-out 2s;
-18: }
-19: .project {
-20:   opacity: 0;
+1: .Projects {
+2:   @include flex-center;
+3:   height: 100%;
+4:   width: 100%;
+5:   background: $color-light-medium;
+6:   background-size: cover;
+7:   overflow-y: scroll;
 
 Backtrace:
-./src/styles/scss/projects.scss:15
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/script/tree/variable.rb:49:in `_perform'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/script/tree/node.rb:58:in `perform'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:397:in `visit_prop'
+./src/styles/scss/projects.scss:2:in `flex-center'
+./src/styles/scss/projects.scss:2
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:351:in `block in visit_mixin'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/stack.rb:98:in `block in with_mixin'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/stack.rb:115:in `with_frame'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/stack.rb:98:in `with_mixin'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:349:in `visit_mixin'
 /Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:36:in `visit'
 /Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:160:in `block in visit'
 /Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/stack.rb:79:in `block in with_base'
@@ -68,4 +68,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$color-main-vibrant\".\A         on line 15 of ./src/styles/scss/projects.scss\A \A 10:   display: flex;\A 11:   justify-content: center;\A 12:   align-items: center;\A 13:   width: 25%;\A 14:   height: 25%;\A 15:   color: $color-main-vibrant;\A 16:   font-family: Lato-Regular;\A 17:   transition: 2s ease-in-out 2s;\A 18: }\A 19: .project {\A 20:   opacity: 0;"; }
+  content: "Error: Undefined mixin 'flex-center'.\A         on line 2 of ./src/styles/scss/projects.scss, in `flex-center'\A         from line 2 of ./src/styles/scss/projects.scss\A \A 1: .Projects {\A 2:   @include flex-center;\A 3:   height: 100%;\A 4:   width: 100%;\A 5:   background: $color-light-medium;\A 6:   background-size: cover;\A 7:   overflow-y: scroll;"; }

@@ -11,6 +11,11 @@ class Contact extends Component {
         </header>
         <section className='component-full-screen-content'>
           <h1>CONTACT ME</h1>
+          <form>
+            <label>Your Email: <input type="text" /></label>
+            <label>What do you want?: <input type="text" /></label>
+            <a href='mailto:blakeworsley@gmail.com'><button>Send</button></a>
+          </form>
         </section>
       </section>
     );

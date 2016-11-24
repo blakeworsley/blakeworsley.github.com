@@ -1,21 +1,17 @@
 /*
-Error: Undefined variable: "$color-main-vibrant".
-        on line 18 of ./src/styles/scss/tiles.scss
+Error: Undefined variable: "$color-light".
+        on line 2 of ./src/styles/scss/computer.scss
 
-13:   flex-wrap: wrap;
-14:   width: 25%;
-15:   height: 25%;
-16:   font-family: Lato-Regular;
-17:   transition: 1s ease-in-out 1s;
-18:   color: $color-main-vibrant;
-19: }
-20: .tile {
-21:   opacity: 0;
-22:   font-size: 0.4em;
-23:   transition: 0.5s ease-in-out 0.5s;
+1: .computer-browser {
+2:   background: $color-light;
+3:   border-radius: 3px;
+4:   height: 80%;
+5:   width: 75%;
+6:   nav {
+7:     display: flex;
 
 Backtrace:
-./src/styles/scss/tiles.scss:18
+./src/styles/scss/computer.scss:2
 /Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/script/tree/variable.rb:49:in `_perform'
 /Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/script/tree/node.rb:58:in `perform'
 /Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:397:in `visit_prop'
@@ -68,4 +64,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$color-main-vibrant\".\A         on line 18 of ./src/styles/scss/tiles.scss\A \A 13:   flex-wrap: wrap;\A 14:   width: 25%;\A 15:   height: 25%;\A 16:   font-family: Lato-Regular;\A 17:   transition: 1s ease-in-out 1s;\A 18:   color: $color-main-vibrant;\A 19: }\A 20: .tile {\A 21:   opacity: 0;\A 22:   font-size: 0.4em;\A 23:   transition: 0.5s ease-in-out 0.5s;"; }
+  content: "Error: Undefined variable: \"$color-light\".\A         on line 2 of ./src/styles/scss/computer.scss\A \A 1: .computer-browser {\A 2:   background: $color-light;\A 3:   border-radius: 3px;\A 4:   height: 80%;\A 5:   width: 75%;\A 6:   nav {\A 7:     display: flex;"; }
