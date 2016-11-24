@@ -20,7 +20,9 @@ class Rows extends Component {
                 activateAbout={activateAbout}
                 activateHome={activateHome}
               />
-              : <h1 onClick={() => {activateAbout()}}>ABOUT</h1>
+              : <h1 onClick={() => {activateAbout()}} className='expandable-title'>
+                <div className='row-hover-effect'></div>
+                ABOUT</h1>
             )
           }
         </section>
@@ -33,7 +35,7 @@ class Rows extends Component {
                 activateProjects={activateProjects}
                 activateHome={activateHome}
               />
-              : <h1 onClick={() => {activateProjects()}}>PROJECTS</h1>
+              : <h1 onClick={() => {activateProjects()}} className='expandable-title'>PROJECTS</h1>
             )
           }
         </section>
@@ -46,7 +48,7 @@ class Rows extends Component {
                 activateContact={activateContact}
                 activateHome={activateHome}
               />
-              : <h1 onClick={() => {activateContact()}}>CONTACT</h1>
+              : <h1 onClick={() => {activateContact()}} className='expandable-title'>CONTACT</h1>
             )
           }
         </section>

@@ -1,21 +1,21 @@
 /*
-Error: Undefined variable: "$color-light".
-        on line 36 of ./src/styles/scss/projects.scss
+Error: Undefined variable: "$color-main-vibrant".
+        on line 15 of ./src/styles/scss/projects.scss
 
-31:   z-index: 3;
-32:   background: url(../../../public/img/steamboat-barn.jpg) no-repeat fixed;
-33:   background-size: cover;
-34: }
-35: .project-1 {
-36:   background: $color-light;
-37: }
-38: .project-2 {
-39:   background: $color-light-medium;
-40: }
-41: .project-3 {
+10:   display: flex;
+11:   justify-content: center;
+12:   align-items: center;
+13:   width: 25%;
+14:   height: 25%;
+15:   color: $color-main-vibrant;
+16:   font-family: Lato-Regular;
+17:   transition: 2s ease-in-out 2s;
+18: }
+19: .project {
+20:   opacity: 0;
 
 Backtrace:
-./src/styles/scss/projects.scss:36
+./src/styles/scss/projects.scss:15
 /Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/script/tree/variable.rb:49:in `_perform'
 /Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/script/tree/node.rb:58:in `perform'
 /Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:397:in `visit_prop'
@@ -68,4 +68,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$color-light\".\A         on line 36 of ./src/styles/scss/projects.scss\A \A 31:   z-index: 3;\A 32:   background: url(../../../public/img/steamboat-barn.jpg) no-repeat fixed;\A 33:   background-size: cover;\A 34: }\A 35: .project-1 {\A 36:   background: $color-light;\A 37: }\A 38: .project-2 {\A 39:   background: $color-light-medium;\A 40: }\A 41: .project-3 {"; }
+  content: "Error: Undefined variable: \"$color-main-vibrant\".\A         on line 15 of ./src/styles/scss/projects.scss\A \A 10:   display: flex;\A 11:   justify-content: center;\A 12:   align-items: center;\A 13:   width: 25%;\A 14:   height: 25%;\A 15:   color: $color-main-vibrant;\A 16:   font-family: Lato-Regular;\A 17:   transition: 2s ease-in-out 2s;\A 18: }\A 19: .project {\A 20:   opacity: 0;"; }

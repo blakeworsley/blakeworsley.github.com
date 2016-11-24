@@ -34,8 +34,6 @@
 }
 
 .component-full-screen-content {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   height: 100%;
+  overflow-y: scroll;
 }

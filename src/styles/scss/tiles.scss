@@ -1,4 +1,4 @@
-.Projects {
+.Tiles {
   height: 100%;
   width: 100%;
   display: flex;
@@ -6,45 +6,47 @@
   background: url(../../../public/img/steamboat-barn.jpg) no-repeat fixed;
   background-size: cover;
 }
-.project-container {
+.tile-container {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 25%;
   height: 25%;
-  color: $color-main-vibrant;
   font-family: Lato-Regular;
   transition: 2s ease-in-out 2s;
 }
-.project {
+.tile {
   opacity: 0;
-  font-size: 0.5em;
-  transition: 0.3s;
+  color: $color-main-vibrant;
+  font-size: 0.4em;
+  transition: 1s ease-in-out 1s;
 }
 
-.project-container:hover .project{
+.tile-container:hover .tile{
+  color: $color-darker;
   opacity: 1;
+  transition: $transition-main ease-in-out 0s;
 }
-.project-container:hover {
+.tile-container:hover {
   background: rgb(52, 52, 52);
   overflow: hidden;
   z-index: 3;
   background: url(../../../public/img/steamboat-barn.jpg) no-repeat fixed;
   background-size: cover;
 }
-.project-1 {
+.tile-1 {
   background: $color-light;
 }
-.project-2 {
+.tile-2 {
   background: $color-light-medium;
 }
-.project-3 {
+.tile-3 {
   background: $color-medium;
 }
-.project-4 {
+.tile-4 {
   background: $color-medium-dark;
 }
 
-.project-container:hover {
+.tile-container:hover {
   transition: $transition-main ease-in-out 0s;
 }

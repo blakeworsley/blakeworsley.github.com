@@ -10,25 +10,25 @@ class Projects extends Component {
           BACK
         </header>
         <section className='Projects'>
-          <article className='project-container project-1'><div className='project'>Project 1</div></article>
-          <article className='project-container project-1'><div className='project'>Project 1.2</div></article>
-          <article className='project-container project-1'><div className='project'>Project 1.3</div></article>
-          <article className='project-container project-1'><div className='project'>Project 1.4</div></article>
+          <article className='project-container project-1'><div className='project'>I</div></article>
+          <article className='project-container project-1'><div className='project'>was</div></article>
+          <article className='project-container project-1'><div className='project'>raised</div></article>
+          <article className='project-container project-1'><div className='project'>in</div></article>
 
-          <article className='project-container project-2'><div className='project'>Project 2</div></article>
-          <article className='project-container project-2'><div className='project'>Project 2.2</div></article>
-          <article className='project-container project-2'><div className='project'>Project 2.3</div></article>
-          <article className='project-container project-2'><div className='project'>Project 2.4</div></article>
+          <article className='project-container project-2'><div className='project'>Steamboat</div></article>
+          <article className='project-container project-2'><div className='project'>Springs</div></article>
+          <article className='project-container project-2'><div className='project'>Colorado</div></article>
+          <article className='project-container project-2'><div className='project'>and</div></article>
 
-          <article className='project-container project-3'><div className='project'>Project 3</div></article>
-          <article className='project-container project-3'><div className='project'>Project 3.2</div></article>
-          <article className='project-container project-3'><div className='project'>Project 3.3</div></article>
-          <article className='project-container project-3'><div className='project'>Project 3.4</div></article>
+          <article className='project-container project-3'><div className='project'>managed</div></article>
+          <article className='project-container project-3'><div className='project'>to</div></article>
+          <article className='project-container project-3'><div className='project'>survive</div></article>
+          <article className='project-container project-3'><div className='project'>swimming</div></article>
 
-          <article className='project-container project-4'><div className='project'>Project 4</div></article>
-          <article className='project-container project-4'><div className='project'>Project 4.2</div></article>
-          <article className='project-container project-4'><div className='project'>Project 4.3</div></article>
-          <article className='project-container project-4'><div className='project'>Project 4.4</div></article>
+          <article className='project-container project-4'><div className='project'>outside</div></article>
+          <article className='project-container project-4'><div className='project'>during</div></article>
+          <article className='project-container project-4'><div className='project'>harsh</div></article>
+          <article className='project-container project-4'><div className='project'>winters</div></article>
         </section>
       </section>
     );

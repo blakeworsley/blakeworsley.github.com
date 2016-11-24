@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Tiles from './Tiles'
 
 class About extends Component {
   render() {
@@ -10,7 +11,7 @@ class About extends Component {
           BACK
         </header>
         <section className='component-full-screen-content'>
-          <h1>MY NAME IS BLAKE</h1>
+          <Tiles />
         </section>
       </section>
     );
