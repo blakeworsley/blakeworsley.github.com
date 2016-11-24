@@ -8,6 +8,8 @@ $color-medium-dark: darken($color-base, 60);
 $color-dark: darken($color-base, 75);
 $color-darker: darken($color-base, 85);
 
+$color-main-vibrant: rgb(121, 255, 227);
+
 
 // FONT
 $font-main: Lato-Regular;
@@ -27,9 +29,24 @@ $margin-main-selected: 20px 20px 20px 300px;
 
 // MIXINS
 
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
+@mixin shadow-main-inner {
+  box-shadow: 4px 4px 10px 0 rgba(0,0,0,0.20);
+}
+
+@mixin shadow-main-outer {
+  box-shadow: inset 3px 3px 10px 0 rgba(0,0,0,0.20);
+}
 
 
 //EFFECTS
 
 $transition-main: 0.25s;
+$transition-fast: 0.1s;
+$transition-medium: 0.5s;
+$transition-slow: 2s;

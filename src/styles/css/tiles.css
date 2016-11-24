@@ -1,21 +1,21 @@
 /*
-Error: Undefined variable: "$color-base".
-        on line 9 of ./src/styles/scss/rows.scss
+Error: Undefined variable: "$color-main-vibrant".
+        on line 18 of ./src/styles/scss/tiles.scss
 
-4: }
-5: 
-6: .row {
-7:   width       : 100%;
-8:   height      : 24.3vh;
-9:   color       : $color-base;
-10:   font-family : $font-main;
-11:   font-size   : 3.5em;
-12:   transition  : 0.3s;
-13: }
-14: 
+13:   flex-wrap: wrap;
+14:   width: 25%;
+15:   height: 25%;
+16:   font-family: Lato-Regular;
+17:   transition: 1s ease-in-out 1s;
+18:   color: $color-main-vibrant;
+19: }
+20: .tile {
+21:   opacity: 0;
+22:   font-size: 0.4em;
+23:   transition: 0.5s ease-in-out 0.5s;
 
 Backtrace:
-./src/styles/scss/rows.scss:9
+./src/styles/scss/tiles.scss:18
 /Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/script/tree/variable.rb:49:in `_perform'
 /Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/script/tree/node.rb:58:in `perform'
 /Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:397:in `visit_prop'
@@ -68,4 +68,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$color-base\".\A         on line 9 of ./src/styles/scss/rows.scss\A \A 4: }\A 5: \A 6: .row {\A 7:   width       : 100%;\A 8:   height      : 24.3vh;\A 9:   color       : $color-base;\A 10:   font-family : $font-main;\A 11:   font-size   : 3.5em;\A 12:   transition  : 0.3s;\A 13: }\A 14: "; }
+  content: "Error: Undefined variable: \"$color-main-vibrant\".\A         on line 18 of ./src/styles/scss/tiles.scss\A \A 13:   flex-wrap: wrap;\A 14:   width: 25%;\A 15:   height: 25%;\A 16:   font-family: Lato-Regular;\A 17:   transition: 1s ease-in-out 1s;\A 18:   color: $color-main-vibrant;\A 19: }\A 20: .tile {\A 21:   opacity: 0;\A 22:   font-size: 0.4em;\A 23:   transition: 0.5s ease-in-out 0.5s;"; }

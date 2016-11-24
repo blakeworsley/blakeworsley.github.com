@@ -151,7 +151,7 @@ table {
 .header-nav .unselected-nav:hover {
   margin-left: -10px;
   padding-left: 10px;
-  background-color: #262626; }
+  background-color: #79ffe3; }
 
 .selected-nav {
   color: #b4b4b4;
@@ -193,65 +193,254 @@ table {
 .main-container {
   position: relative;
   height: 100%;
-  overflow-y: scroll; }
+  overflow-y: hidden; }
 
 .maximize-main {
   margin: 10px;
   transition: 0.25s; }
 
-.Rows {
+.component-full-screen {
+  height: 100%;
+  width: 100%;
+  background: #d9d9d9;
+  display: flex;
+  flex-direction: column; }
+
+.component-full-screen-active {
+  opacity: 1;
+  transition: 0.5s; }
+
+.component-full-screen-header {
+  background-color: #ededed;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  font-size: 0.4em; }
+
+.component-full-screen-header:hover {
+  transition: 0.25s;
+  background: white; }
+
+.back-to-home {
+  padding-right: 10px;
+  transition: 0.25s; }
+
+.component-full-screen-header:hover .back-to-home {
+  padding-left: 5px; }
+
+.component-full-screen-content {
+  height: 100%;
+  overflow-y: scroll; }
+
+.Tiles {
   height: 100%;
   width: 100%;
   display: flex;
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+  background: url(../../../public/img/steamboat-barn.jpg) no-repeat fixed;
+  background-size: cover; }
 
-.project-container {
+.tile-container {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
   width: 25%;
-  height: 24.3vh;
-  color: #fff;
+  height: 25%;
   font-family: Lato-Regular;
-  transition: 0.3s; }
+  transition: 1s ease-in-out 1s;
+  color: #79ffe3; }
 
-.project {
+.tile {
   opacity: 0;
-  font-size: 1.1em;
-  transition: 0.3s; }
+  font-size: 0.4em;
+  transition: 0.5s ease-in-out 0.5s; }
 
-.project-container:hover .project {
+.tile-container:hover .tile {
   opacity: 1;
-  font-size: 1.2em; }
+  transition: 0.25s ease-in-out 0s; }
 
-.project-container:hover {
+.tile-container:hover {
   background: #343434;
   overflow: hidden;
-  z-index: 3; }
+  z-index: 3;
+  background: url(../../../public/img/steamboat-barn.jpg) no-repeat fixed;
+  background-size: cover; }
 
-.row-1 {
-  background: #ebebeb; }
+.tile-1 {
+  background: #d9d9d9;
+  color: #b3b3b3; }
 
-.row-2 {
-  background: #c9c9c9; }
+.tile-2 {
+  background: #b3b3b3;
+  color: #8c8c8c; }
 
-.row-3 {
-  background: #a8a8a8; }
+.tile-3 {
+  background: #8c8c8c;
+  color: #666666; }
 
-.row-4 {
-  background: #8b8b8b; }
+.tile-4 {
+  background: #666666;
+  color: #404040; }
 
+.tile-container:hover {
+  transition: 0.25s ease-in-out 0s; }
+
+.Projects {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  background: #b3b3b3;
+  background-size: cover;
+  overflow-y: scroll; }
+
+.activate-computer-button {
+  background: #8c8c8c;
+  color: white;
+  border: none;
+  font: Lato-Regular;
+  font-size: 20px;
+  padding: 10px; }
+
+.activate-computer-button:hover {
+  background: #666666; }
+
+.computer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  perspective: 2400px; }
+
+.computer-back {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #8c8c8c;
+  transition: 0.5s;
+  border-radius: 4px 4px 0px 0px;
+  transform-origin: bottom;
+  transform: rotateX(-90.2deg);
+  width: 600px;
+  height: 400px;
+  margin-top: -400px; }
+
+.computer-back-open {
+  transform-origin: bottom;
+  transform: rotateX(0deg);
+  margin-top: 0px; }
+
+.computer-screen {
+  box-shadow: inset 3px 3px 10px 0 rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  background: white;
+  width: 95%;
+  height: 95%;
+  font-size: 12px; }
+
+.computer-bottom {
+  background: #666666;
+  border-radius: 0px 0px 4px 4px;
+  width: 725px;
+  height: 15px; }
+
+@media (max-width: 600px) {
+  .computer-back {
+    width: 200px;
+    height: 400px;
+    border-radius: 30px; }
+
+  .computer-screen {
+    width: 90%;
+    height: 80%; }
+
+  .computer-bottom {
+    visibility: hidden;
+    opacity: 0;
+    width: 0; } }
+.computer-browser {
+  background: #ededed;
+  margin-top: 20px;
+  border-radius: 3px;
+  height: 80%;
+  width: 75%;
+  box-shadow: 4px 4px 10px 0 rgba(0, 0, 0, 0.2); }
+  .computer-browser nav {
+    display: flex;
+    align-items: center;
+    padding-left: 2%;
+    height: 5%;
+    background: #d9d9d9;
+    border-radius: 3px 3px 0px 0px; }
+
+.computer-browser-nav-button {
+  margin-left: 3px;
+  height: 7px;
+  width: 7px;
+  border-radius: 50%;
+  background: #8c8c8c; }
+
+.nav-red-button:hover {
+  background: #e85a5a; }
+
+.nav-yellow-button:hover {
+  background: #deca1a; }
+
+.nav-green-button:hover {
+  background: #58c852; }
+
+.computer-app-selection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10%;
+  width: 80%;
+  background: #ededed;
+  opacity: 0.8;
+  overflow-y: hidden;
+  overflow-x: scroll; }
+  .computer-app-selection li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 95%;
+    padding: 0 5px 0 5px;
+    margin: 5px;
+    border-radius: 2px;
+    background: #b3b3b3;
+    color: white;
+    transition: 0.25s; }
+  .computer-app-selection li:hover {
+    margin-top: -2px;
+    background: #79ffe3;
+    color: #262626; }
+
+@media (max-width: 600px) {
+  .computer-browser {
+    width: 100%;
+    height: 100%;
+    border-radius: 0px;
+    margin-top: 0px; }
+    .computer-browser nav {
+      border-radius: 0px; }
+
+  .computer-app-selection {
+    width: 95%;
+    height: 22%; } }
 .Rows {
   width: 100%;
   height: 100%; }
 
 .row {
-  display: flex;
   width: 100%;
   height: 24.3vh;
   color: white;
-  align-items: center;
-  justify-content: center;
   font-family: Lato-Regular;
   font-size: 3.5em;
   transition: 0.3s; }
@@ -261,33 +450,14 @@ table {
   background: #d9d9d9;
   transition: 0.2s; }
 
-.row-1:hover {
-  color: #404040;
-  transition: 0.2s; }
-
 .row-2 {
   background: #b3b3b3; }
-
-.row-2:hover {
-  color: #404040;
-  opacity: 0.8;
-  transition: 0.2s; }
 
 .row-3 {
   background: #8c8c8c; }
 
-.row-3:hover {
-  color: #404040;
-  opacity: 0.7;
-  transition: 0.2s; }
-
 .row-4 {
   background: #666666; }
-
-.row-4:hover {
-  color: #404040;
-  opacity: 0.6;
-  transition: 0.2s; }
 
 .row-active {
   width: 100%;
@@ -301,39 +471,17 @@ table {
   opacity: 0;
   visibility: hidden; }
 
-.About {
-  height: 100%;
+.expandable-title {
   width: 100%;
-  background: #d9d9d9;
-  display: flex;
-  flex-direction: column; }
-
-.About-active {
-  opacity: 1;
-  transition: 0.5s; }
-
-.about-header {
-  background-color: #ededed;
-  display: flex;
-  align-items: center;
-  padding: 10px;
-  font-size: 0.4em; }
-
-.about-header:hover {
-  transition: 0.25s;
-  background: white; }
-
-.back-to-home {
-  padding-right: 10px;
-  transition: 0.25s; }
-
-.about-header:hover .back-to-home {
-  padding-left: 5px; }
-
-.about-content {
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100%; }
+  clear: both;
+  transition: 0.25s; }
+
+.expandable-title:hover {
+  color: #404040;
+  background: #79ffe3; }
 
 /*# sourceMappingURL=index.css.map */
