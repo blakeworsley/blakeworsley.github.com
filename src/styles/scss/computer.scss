@@ -1,24 +1,63 @@
 .computer-browser {
-  background: $color-light;
+  background: $color-lighter;
+  margin-top: 20px;
   border-radius: 3px;
   height: 80%;
   width: 75%;
+  @include shadow-main-inner;
   nav {
     display: flex;
     align-items: center;
     padding-left: 2%;
     height: 5%;
-    background: $color-light-medium;
+    background: $color-light;
     border-radius: 3px 3px 0px 0px;
   }
 }
 
 .computer-browser-nav-button {
-  margin-left: 0.75%;
+  margin-left: 3px;
   height: 7px;
   width: 7px;
   border-radius: 50%;
   background: $color-medium;
+}
+
+.nav-red-button:hover {
+  background: rgb(232, 90, 90);
+}
+.nav-yellow-button:hover {
+  background: rgb(222, 202, 26);
+}
+.nav-green-button:hover {
+  background: rgb(88, 200, 82);
+}
+
+.computer-app-selection {
+  @include flex-center;
+  height: 10%;
+  width: 80%;
+  background: $color-lighter;
+  opacity: 0.8;
+  overflow-y: hidden;
+  overflow-x: scroll;
+
+  li {
+    @include flex-center;
+    flex-wrap: wrap;
+    height: 95%;
+    padding: 0 5px 0 5px;
+    margin: 5px;
+    border-radius: 2px;
+    background: $color-light-medium;
+    color: $color-base;
+    transition: $transition-main;
+  }
+  li:hover {
+    margin-top: -2px;
+    background: $color-main-vibrant;
+    color: $color-darker;
+  }
 }
 
 
@@ -27,8 +66,13 @@
     width: 100%;
     height: 100%;
     border-radius: 0px;
+    margin-top: 0px;
     nav {
-      border-radius: 0px; 
+      border-radius: 0px;
     }
+  }
+  .computer-app-selection {
+    width: 95%;
+    height: 22%;
   }
 }

@@ -6,11 +6,19 @@ class ComputerScreen extends Component {
       <section className='computer-screen'>
         <div className='computer-browser'>
           <nav>
-            <div className='computer-browser-nav-button'></div>
-            <div className='computer-browser-nav-button'></div>
-            <div className='computer-browser-nav-button'></div>
+            <div className='computer-browser-nav-button nav-red-button'></div>
+            <div className='computer-browser-nav-button nav-yellow-button'></div>
+            <div className='computer-browser-nav-button nav-green-button'></div>
           </nav>
+          
         </div>
+        <ul className='computer-app-selection'>
+          <li>BLUE</li>
+          <li>REMEMBER</li>
+          <li>SHOOT THE BREEZE</li>
+          <li>GAINS</li>
+          <li>PORTFOLIO</li>
+        </ul>
       </section>
     );
   }
