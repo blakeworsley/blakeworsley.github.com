@@ -19,12 +19,14 @@ class ComputerScreen extends Component {
   }
 
   activateBlue(){
+    this.state.gainsActivated ? this.setState({gainsActivated: false}) : null;
     this.state.blueActivated ?
     this.setState({blueActivated: false}) :
     this.setState({blueActivated: true});
   }
 
   activateGains(){
+    this.state.blueActivated ? this.setState({blueActivated: false}) : null;
     this.state.gainsActivated ?
     this.setState({gainsActivated: false}) :
     this.setState({gainsActivated: true});
