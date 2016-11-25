@@ -1,16 +1,16 @@
 import React, { Component } from 'react';
 
-class Gains extends Component {
+class Portfolio extends Component {
   render() {
     return (
       <section className='computer-application'>
-        <h1 className='project-header'>Gains</h1>
+        <h1 className='project-header'>Portfolio</h1>
         <p className='project-content'>
-          Gains App. About getting your gains in life!!!
+          Inception
         </p>
       </section>
     );
   }
 }
 
-export default Gains;
+export default Portfolio;

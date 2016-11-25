@@ -1,16 +1,16 @@
 import React, { Component } from 'react';
 
-class Gains extends Component {
+class Remember extends Component {
   render() {
     return (
       <section className='computer-application'>
-        <h1 className='project-header'>Gains</h1>
+        <h1 className='project-header'>Remember Coach</h1>
         <p className='project-content'>
-          Gains App. About getting your gains in life!!!
+          Ember Project
         </p>
       </section>
     );
   }
 }
 
-export default Gains;
+export default Remember;

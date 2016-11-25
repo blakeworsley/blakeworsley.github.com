@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import Blue from './work/Blue';
+import Remember from './work/Remember';
 import Gains from './work/Gains';
+import Portfolio from './work/Portfolio';
 
 class ComputerScreen extends Component {
   constructor() {
@@ -19,6 +21,9 @@ class ComputerScreen extends Component {
     this.setState({
       blueActivated: false,
       gainsActivated: false,
+      rememberActivated: false,
+      portfolioActivated: false,
+      computerWindowMinimized: false
     });
   }
   fullscreenActivated() {
@@ -33,18 +38,31 @@ class ComputerScreen extends Component {
   }
 
   activateBlue(){
-    this.state.computerWindowMinimized ? this.setState({computerWindowMinimized: false}) : null;
-    this.state.gainsActivated ? this.setState({gainsActivated: false}) : null;
+    this.closeWindow();
     this.state.blueActivated ?
-    this.setState({blueActivated: false}) :
-    this.setState({blueActivated: true});
+    this.setState({blueActivated: false, computerWindowMinimized: false}) :
+    this.setState({blueActivated: true, computerWindowMinimized: false});
   }
 
   activateGains(){
-    this.state.blueActivated ? this.setState({blueActivated: false}) : null;
+    this.closeWindow();
     this.state.gainsActivated ?
-    this.setState({gainsActivated: false}) :
-    this.setState({gainsActivated: true});
+    this.setState({gainsActivated: false, computerWindowMinimized: false}) :
+    this.setState({gainsActivated: true, computerWindowMinimized: false});
+  }
+
+  activatePortfolio(){
+    this.closeWindow();
+    this.state.portfolioActivated ?
+    this.setState({portfolioActivated: false, computerWindowMinimized: false}) :
+    this.setState({portfolioActivated: true, computerWindowMinimized: false});
+  }
+
+  activateRemember(){
+    this.closeWindow();
+    this.state.rememberActivated ?
+    this.setState({rememberActivated: false, computerWindowMinimized: false}) :
+    this.setState({rememberActivated: true, computerWindowMinimized: false});
   }
 
   render() {
@@ -52,29 +70,35 @@ class ComputerScreen extends Component {
        blueActivated, gainsActivated, rememberActivated, portfolioActivated } = this.state;
     return (
       <section className='computer-screen'>
-        {blueActivated ? <Blue closeWindow={() => {this.closeWindow()}}
-          computerFullscreenActivated={computerFullscreenActivated}
-          fullscreenActivated={() => {this.fullscreenActivated()}}
-          computerWindowMinimized={computerWindowMinimized}
-          minimizeWindow={() => {this.minimizeWindow()}}
-        /> : null}
-        {gainsActivated ? <Gains closeWindow={() => {this.closeWindow()}}
-          computerFullscreenActivated={computerFullscreenActivated}
-          fullscreenActivated={() => {this.fullscreenActivated()}}
-          computerWindowMinimized={computerWindowMinimized}
-          minimizeWindow={() => {this.minimizeWindow()}}
-        /> : null}
+        { (blueActivated || gainsActivated || rememberActivated || portfolioActivated) ?
+          <div className={`computer-browser ${computerFullscreenActivated ? 'computer-browser-fullscreen' : ''} ${computerWindowMinimized ? 'computer-browser-minimize' : ''}`}>
+            <nav>
+              <div className='computer-browser-nav-button nav-red-button'
+                onClick={() => this.closeWindow()}></div>
+              <div className='computer-browser-nav-button nav-yellow-button'
+                onClick={() => this.minimizeWindow()}></div>
+              <div className='computer-browser-nav-button nav-green-button'
+                onClick={() => this.fullscreenActivated()}></div>
+            </nav>
+              {blueActivated ? <Blue /> : null}
+              {rememberActivated ? <Remember /> : null}
+              {gainsActivated ? <Gains /> : null}
+              {portfolioActivated ? <Portfolio /> : null}
+          </div>
+          : null
+        }
+
         <ul className='computer-app-selection'>
           <li onClick={() => this.activateBlue()}
             className={`computer-app-selection-li ${blueActivated ? 'computer-app-selection-selected' : null}`}
             >BLUE</li>
-          <li
+          <li onClick={() => this.activateRemember()}
             className={`computer-app-selection-li ${rememberActivated ? 'computer-app-selection-selected' : null}`}
             >REMEMBER</li>
           <li onClick={() => this.activateGains()}
             className={`computer-app-selection-li ${gainsActivated ? 'computer-app-selection-selected' : null}`}
             >GAINS</li>
-          <li
+          <li onClick={() => this.activatePortfolio()}
             className={`computer-app-selection-li ${portfolioActivated ? 'computer-app-selection-selected' : null}`}
             >PORTFOLIO</li>
         </ul>
@@ -84,30 +108,3 @@ class ComputerScreen extends Component {
 }
 
 export default ComputerScreen;
-
-
-
-
-
-          {/* <article className='project-card'>
-            <h1 className='project-header'>Blue Coach</h1>
-            <p className='project-content'>
-              Designed to help swimmers communicate with their Coaches to
-              prevent overtraining. This is the Coach Dashboard version of the website
-            </p>
-          </article>
-
-          <article className='project-card'>
-            <h1 className='project-header'>Gains</h1>
-            <p className='project-content'>Information about the project goes here.</p>
-          </article>
-
-          <article className='project-card'>
-            <h1 className='project-header'>Pomodoro App</h1>
-            <p className='project-content'>Information about the project goes here.</p>
-          </article>
-
-          <article className='project-card'>
-            <h1 className='project-header'>Ember Project</h1>
-            <p className='project-content'>Information about the project goes here.</p>
-          </article> */}
