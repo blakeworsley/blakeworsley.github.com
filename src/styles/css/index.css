@@ -315,6 +315,7 @@ table {
   perspective: 2400px; }
 
 .computer-back {
+  box-shadow: 0 0 200px 5px rgba(238, 254, 255, 0.25), inset 0 0 35px 5px rgba(239, 254, 255, 0.1);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -325,7 +326,8 @@ table {
   transform: rotateX(-90.2deg);
   width: 600px;
   height: 400px;
-  margin-top: -400px; }
+  margin-top: -400px;
+  box-shadow: none; }
 
 .computer-back-open {
   transform-origin: bottom;
@@ -333,7 +335,7 @@ table {
   margin-top: 0px; }
 
 .computer-screen {
-  box-shadow: inset 3px 3px 10px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 200px 5px rgba(238, 254, 255, 0.25), inset 0 0 35px 5px rgba(239, 254, 255, 0.1);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -412,7 +414,6 @@ table {
 
 .computer-application {
   padding: 10px;
-  width: 100%;
   height: 100%; }
 
 .computer-app-selection {
@@ -452,8 +453,10 @@ table {
 
 @media (max-width: 600px) {
   .computer-browser {
-    width: 100%;
+    display: flex;
+    flex-direction: column;
     height: 100%;
+    width: 100%;
     border-radius: 0px;
     margin-top: 0px;
     box-shadow: inset 3px 3px 10px 0 rgba(0, 0, 0, 0.2); }
@@ -461,8 +464,20 @@ table {
       border-radius: 0px; }
 
   .computer-app-selection {
-    width: 95%;
-    height: 22%; } }
+    width: 100%;
+    justify-content: flex-start;
+    background: none;
+    overflow-y: scroll; }
+
+  .nav-yellow-button {
+    display: none;
+    visibility: hidden;
+    opacity: 0; }
+
+  .nav-green-button {
+    display: none;
+    visibility: hidden;
+    opacity: 0; } }
 .Rows {
   width: 100%;
   height: 100%; }
@@ -513,5 +528,9 @@ table {
 .expandable-title:hover {
   color: #404040;
   background: #79ffe3; }
+
+@media (max-width: 600px) {
+  .row {
+    font-size: 2em; } }
 
 /*# sourceMappingURL=index.css.map */

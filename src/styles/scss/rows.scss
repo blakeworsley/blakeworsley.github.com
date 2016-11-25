@@ -91,3 +91,10 @@
   color: $color-dark;
   background: $color-main-vibrant;
 }
+
+
+@media (max-width: 600px) {
+  .row {
+    font-size: 2em;
+  }
+}

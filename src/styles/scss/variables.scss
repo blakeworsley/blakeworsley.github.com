@@ -43,6 +43,9 @@ $margin-main-selected: 20px 20px 20px 300px;
   box-shadow: inset 3px 3px 10px 0 rgba(0,0,0,0.20);
 }
 
+@mixin shadow-screen-glow {
+  box-shadow: 0 0 200px 5px rgba(238, 254, 255, 0.25), inset 0 0 35px 5px rgba(239,254,255,0.10);
+}
 
 //EFFECTS
 

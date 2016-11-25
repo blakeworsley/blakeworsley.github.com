@@ -24,6 +24,7 @@
   perspective: 2400px;
 }
 .computer-back {
+  @include shadow-screen-glow;
   @include flex-center;
   background: $color-medium;
   transition: $transition-medium;
@@ -33,6 +34,7 @@
   width: 600px;
   height: 400px;
   margin-top: -400px;
+  box-shadow: none;
 }
 .computer-back-open {
   transform-origin: bottom;
@@ -40,7 +42,7 @@
   margin-top: 0px;
 }
 .computer-screen {
-  @include shadow-main-outer;
+  @include shadow-screen-glow;
   display: flex;
   align-items: center;
   justify-content: space-between;
