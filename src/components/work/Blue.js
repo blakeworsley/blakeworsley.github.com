@@ -2,14 +2,16 @@ import React, { Component } from 'react';
 
 class Blue extends Component {
   render() {
-    const { closeWindow } = this.props;
+    const { closeWindow, computerFullscreenActivated, fullscreenActivated, computerWindowMinimized, minimizeWindow } = this.props;
     return (
-      <div className='computer-browser'>
+      <div className={`computer-browser ${computerFullscreenActivated ? 'computer-browser-fullscreen' : ''} ${computerWindowMinimized ? 'computer-browser-minimize' : ''}`}>
         <nav>
           <div className='computer-browser-nav-button nav-red-button'
             onClick={() => closeWindow()}></div>
-          <div className='computer-browser-nav-button nav-yellow-button'></div>
-          <div className='computer-browser-nav-button nav-green-button'></div>
+          <div className='computer-browser-nav-button nav-yellow-button'
+            onClick={() => minimizeWindow()}></div>
+          <div className='computer-browser-nav-button nav-green-button'
+            onClick={() => fullscreenActivated()}></div>
         </nav>
         <section className='computer-application'>
           <h1 className='project-header'>Blue Coach</h1>

@@ -4,6 +4,7 @@
   border-radius: 3px;
   height: 80%;
   width: 75%;
+  transition: $transition-main;
   @include shadow-main-inner;
   nav {
     display: flex;
@@ -15,6 +16,23 @@
   }
 }
 
+.computer-browser-fullscreen {
+  width: 100%;
+  height: 90%;
+  margin-top: 0px;
+  box-shadow: none;
+}
+
+.computer-browser-minimize {
+  visibility: hidden;
+  opacity: 0;
+  margin-top: 300px;
+  width: 0px;
+  height: 0px;
+  transition: $transition-main;
+}
+
+
 .computer-browser-nav-button {
   margin-left: 3px;
   height: 7px;
@@ -23,14 +41,19 @@
   background: $color-medium;
 }
 
-.nav-red-button:hover {
+.nav-red-button {
   background: rgb(232, 90, 90);
 }
-.nav-yellow-button:hover {
+.nav-yellow-button {
   background: rgb(222, 202, 26);
 }
-.nav-green-button:hover {
+.nav-green-button {
   background: rgb(88, 200, 82);
+}
+.computer-application {
+  padding: 10px;
+  width: 100%;
+  height: 100%;
 }
 
 .computer-app-selection {
@@ -41,23 +64,31 @@
   opacity: 0.8;
   overflow-y: hidden;
   overflow-x: scroll;
+}
 
-  li {
-    @include flex-center;
-    flex-wrap: wrap;
-    height: 95%;
-    padding: 5px;
-    margin: 5px;
-    border-radius: 2px;
-    background: $color-light-medium;
-    color: $color-base;
-    transition: $transition-main;
-  }
-  li:hover {
-    margin-top: -2px;
-    background: $color-main-vibrant;
-    color: $color-darker;
-  }
+.computer-app-selection-li {
+  @include flex-center;
+  flex-wrap: wrap;
+  height: 95%;
+  padding: 5px;
+  margin: 5px;
+  border-radius: 2px;
+  background: $color-light-medium;
+  color: $color-base;
+  transition: $transition-main;
+}
+
+.computer-app-selection-li:hover {
+  @include shadow-main-inner;
+  margin-top: -2px;
+  background: $color-main-vibrant;
+  color: $color-darker;
+}
+
+.computer-app-selection-selected {
+  @include shadow-main-inner;
+  background: $color-main-vibrant;
+  color: $color-darker;
 }
 
 

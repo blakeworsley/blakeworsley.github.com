@@ -8,6 +8,10 @@ class ComputerScreen extends Component {
     this.state = {
       blueActivated: false,
       gainsActivated: false,
+      rememberActivated: false,
+      portfolioActivated: false,
+      computerFullscreenActivated: false,
+      computerWindowMinimized: false,
     };
   }
 
@@ -17,8 +21,19 @@ class ComputerScreen extends Component {
       gainsActivated: false,
     });
   }
+  fullscreenActivated() {
+    this.state.computerFullscreenActivated ?
+    this.setState({computerFullscreenActivated: false}) :
+    this.setState({computerFullscreenActivated: true});
+  }
+  minimizeWindow() {
+    this.state.computerWindowMinimized ?
+    this.setState({computerWindowMinimized: false}) :
+    this.setState({computerWindowMinimized: true});
+  }
 
   activateBlue(){
+    this.state.computerWindowMinimized ? this.setState({computerWindowMinimized: false}) : null;
     this.state.gainsActivated ? this.setState({gainsActivated: false}) : null;
     this.state.blueActivated ?
     this.setState({blueActivated: false}) :
@@ -33,16 +48,35 @@ class ComputerScreen extends Component {
   }
 
   render() {
+    const { computerFullscreenActivated, computerWindowMinimized,
+       blueActivated, gainsActivated, rememberActivated, portfolioActivated } = this.state;
     return (
       <section className='computer-screen'>
-        {this.state.blueActivated ? <Blue closeWindow={() => {this.closeWindow()}}/> : null}
-        {this.state.gainsActivated ? <Gains closeWindow={() => {this.closeWindow()}}/> : null}
+        {blueActivated ? <Blue closeWindow={() => {this.closeWindow()}}
+          computerFullscreenActivated={computerFullscreenActivated}
+          fullscreenActivated={() => {this.fullscreenActivated()}}
+          computerWindowMinimized={computerWindowMinimized}
+          minimizeWindow={() => {this.minimizeWindow()}}
+        /> : null}
+        {gainsActivated ? <Gains closeWindow={() => {this.closeWindow()}}
+          computerFullscreenActivated={computerFullscreenActivated}
+          fullscreenActivated={() => {this.fullscreenActivated()}}
+          computerWindowMinimized={computerWindowMinimized}
+          minimizeWindow={() => {this.minimizeWindow()}}
+        /> : null}
         <ul className='computer-app-selection'>
-          <li onClick={() => this.activateBlue()}>BLUE</li>
-          <li>REMEMBER</li>
-          <li>SHOOT THE BREEZE</li>
-          <li onClick={() => this.activateGains()}>GAINS</li>
-          <li>PORTFOLIO</li>
+          <li onClick={() => this.activateBlue()}
+            className={`computer-app-selection-li ${blueActivated ? 'computer-app-selection-selected' : null}`}
+            >BLUE</li>
+          <li
+            className={`computer-app-selection-li ${rememberActivated ? 'computer-app-selection-selected' : null}`}
+            >REMEMBER</li>
+          <li onClick={() => this.activateGains()}
+            className={`computer-app-selection-li ${gainsActivated ? 'computer-app-selection-selected' : null}`}
+            >GAINS</li>
+          <li
+            className={`computer-app-selection-li ${portfolioActivated ? 'computer-app-selection-selected' : null}`}
+            >PORTFOLIO</li>
         </ul>
       </section>
     );

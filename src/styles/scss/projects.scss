@@ -45,7 +45,8 @@
   align-items: center;
   justify-content: space-between;
   flex-direction: column;
-  background: $color-base;
+  background: url(../../../public/img/steamboat-barn.jpg);
+  background-size: cover;
   width: 95%;
   height: 95%;
   font-size: 12px;
