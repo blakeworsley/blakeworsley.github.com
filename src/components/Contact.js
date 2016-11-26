@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 class Contact extends Component {
   render() {
-    const { activateHome, activateContact, contactActivated } = this.props;
+    const { activateHome } = this.props;
     return (
       <section className='component-full-screen'>
         <header className='component-full-screen-header' onClick={() => {activateHome()}}>

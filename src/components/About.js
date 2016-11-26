@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import Tiles from './Tiles'
+import Tiles from './Tiles';
 
 class About extends Component {
   render() {
-    const { activateHome, activateAbout, aboutActivated } = this.props;
+    const { activateHome } = this.props;
     return (
       <section className='component-full-screen'>
         <header className='component-full-screen-header' onClick={() => {activateHome()}}>

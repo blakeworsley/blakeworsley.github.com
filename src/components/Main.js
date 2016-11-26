@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Projects from './Projects';
 import Rows from './Rows';
 
 class Main extends Component {

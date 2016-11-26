@@ -5,10 +5,9 @@ import Contact from './Contact';
 
 class Rows extends Component {
   render() {
-    const { navActivated,
-      aboutActivated, projectsActivated,
-      contactActivated, activateAbout,
-      activateProjects, activateContact, activateHome } = this.props;
+    const { aboutActivated, projectsActivated,
+      contactActivated, activateAbout, activateProjects,
+      activateContact, activateHome } = this.props;
     return (
       <section className='Rows'>
 
@@ -58,28 +57,3 @@ class Rows extends Component {
 }
 
 export default Rows;
-
-
-
-// { (aboutActivated || projectsActivated) ? null :
-//   ( contactActivated ?
-//     <Contact
-//       contactActivated={contactActivated}
-//       activateContact={activateContact}
-//       activateHome={activateHome}
-//     />
-//     : <h1 onClick={() => {activateContact()}}>CONTACT</h1>
-//   )
-// }
-
-
-
-{/* <section className={`row row-3 ${contactActivated ? 'row-active' : 'Contact-inactive'} ${(aboutActivated || projectsActivated ) ? 'hide-row' : ''}`}
-  onClick={() => {activateContact()}}>
-  { (aboutActivated || projectsActivated) ? null :
-    <h1>CONTACT</h1>
-  }
-  {/* <Contact
-    contactActivated={contactActivated}
-    activateContact={activateContact}
-  /> */}
