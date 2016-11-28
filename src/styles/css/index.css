@@ -46,6 +46,106 @@ table {
   border-spacing: 0; }
 
 /*# sourceMappingURL=reset.css.map */
+html {
+  font-family: "Lato", sans-serif; }
+
+h1 {
+  font-family: "Lato", sans-serif;
+  font-size: 3em;
+  color: #404040;
+  font-style: bold;
+  text-transform: uppercase; }
+
+h2 {
+  font-family: "Lato", sans-serif;
+  font-size: 2.5em;
+  color: #404040;
+  text-transform: uppercase; }
+
+h3 {
+  font-family: "Lato", sans-serif;
+  font-size: 2em;
+  color: #404040;
+  font-style: italic;
+  text-transform: uppercase; }
+
+h4 {
+  font-family: "Lato", sans-serif;
+  font-size: 1.4em;
+  color: #404040;
+  padding: 12.5px 0; }
+
+p {
+  font-family: "Lato", sans-serif;
+  font-size: 1em;
+  color: #404040; }
+
+a {
+  font-family: "Lato", sans-serif;
+  font-size: 1em;
+  color: #404040;
+  font-style: italic;
+  text-transform: uppercase; }
+
+input {
+  background: #b3b3b3;
+  border-radius: 8px;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1em;
+  color: #404040; }
+
+input::placeholder {
+  color: #d9d9d9; }
+
+input:focus {
+  outline: none;
+  border: 5px solid #79ffe3;
+  background: white;
+  padding: 5px 15px; }
+
+button {
+  background: #404040;
+  border-radius: 8px;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1em;
+  color: white;
+  outline: none;
+  text-transform: uppercase; }
+
+button:disabled, button:disabled button:focus {
+  background: #b3b3b3;
+  color: #404040; }
+
+button:hover, button:focus {
+  background: #79ffe3;
+  color: #404040; }
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 1.3em; }
+
+  h2 {
+    font-size: 1.2em; }
+
+  h3 {
+    font-size: 1em; }
+
+  h4 {
+    font-size: 1em; }
+
+  p {
+    font-size: 0.9em; }
+
+  a {
+    font-size: 0.9em; }
+
+  input {
+    font-size: 0.9em; }
+
+  button {
+    font-size: 0.9em; } }
 .App {
   max-height: 100%;
   max-width: 100%; }
@@ -61,14 +161,13 @@ table {
   top: 0;
   left: 0;
   margin: 10px 0px;
-  font-family: "Lato", sans-serif;
-  font-size: 16px;
   line-height: 30px;
   overflow-y: scroll; }
 
 .header-title {
   letter-spacing: 0.1em;
   position: fixed;
+  font-size: 1em;
   top: 280px;
   left: -165px;
   transition: 0.25s;
@@ -112,9 +211,6 @@ table {
 
 .Header h2, .Header p {
   padding: 10px 0; }
-
-.Header h2 {
-  font-size: 20px; }
 
 .Header .navigationImg {
   margin-top: 11px;
@@ -214,8 +310,7 @@ table {
   background-color: #ededed;
   display: flex;
   align-items: center;
-  padding: 10px;
-  font-size: 0.4em; }
+  padding: 10px; }
 
 .component-full-screen-header:hover {
   transition: 0.25s;
@@ -247,13 +342,11 @@ table {
   flex-wrap: wrap;
   width: 25%;
   height: 25%;
-  font-family: "Lato", sans-serif;
   transition: 1s ease-in-out 1s;
   color: #79ffe3; }
 
 .tile {
   opacity: 0;
-  font-size: 0.4em;
   transition: 0.5s ease-in-out 0.5s; }
 
 .tile-container:hover .tile {
@@ -296,17 +389,6 @@ table {
   background-size: cover;
   overflow-y: scroll; }
 
-.activate-computer-button {
-  background: #8c8c8c;
-  color: white;
-  border: none;
-  font: "Lato", sans-serif;
-  font-size: 20px;
-  padding: 10px; }
-
-.activate-computer-button:hover {
-  background: #666666; }
-
 .computer {
   display: flex;
   justify-content: center;
@@ -315,7 +397,7 @@ table {
   perspective: 2400px; }
 
 .computer-back {
-  box-shadow: 0 0 200px 5px rgba(238, 254, 255, 0.25), inset 0 0 35px 5px rgba(239, 254, 255, 0.1);
+  box-shadow: 0 0 150px 25px rgba(238, 254, 255, 0.5), inset 0 0 35px 5px rgba(239, 254, 255, 0.1);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -335,7 +417,7 @@ table {
   margin-top: 0px; }
 
 .computer-screen {
-  box-shadow: 0 0 200px 5px rgba(238, 254, 255, 0.25), inset 0 0 35px 5px rgba(239, 254, 255, 0.1);
+  box-shadow: 0 0 150px 25px rgba(238, 254, 255, 0.5), inset 0 0 35px 5px rgba(239, 254, 255, 0.1);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -343,14 +425,14 @@ table {
   background: url(../../../public/img/steamboat-barn.jpg);
   background-size: cover;
   width: 95%;
-  height: 95%;
-  font-size: 12px; }
+  height: 95%; }
 
 .computer-bottom {
   background: #666666;
   border-radius: 0px 0px 4px 4px;
   width: 725px;
-  height: 15px; }
+  height: 15px;
+  z-index: 2; }
 
 @media (max-width: 600px) {
   .computer-back {
@@ -486,8 +568,6 @@ table {
   width: 100%;
   height: 24.3vh;
   color: white;
-  font-family: "Lato", sans-serif;
-  font-size: 3.5em;
   transition: 0.3s; }
 
 .row-1 {
@@ -528,9 +608,5 @@ table {
 .expandable-title:hover {
   color: #404040;
   background: #79ffe3; }
-
-@media (max-width: 600px) {
-  .row {
-    font-size: 2em; } }
 
 /*# sourceMappingURL=index.css.map */

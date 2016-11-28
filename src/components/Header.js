@@ -5,8 +5,8 @@ class Header extends Component {
     const { activateNav, navActivated, aboutActivated, projectsActivated,
       contactActivated, activateAbout, activateProjects, activateContact } = this.props;
     return (
-      <section className={`Header ${navActivated ? 'Header-active' : null} ${
-        (aboutActivated || projectsActivated || contactActivated) ? 'minimize-header' : null}`}>
+      <section className={`Header ${navActivated ? 'Header-active' : ''} ${
+        (aboutActivated || projectsActivated || contactActivated) ? 'minimize-header' : ''}`}>
         {navActivated ?
           <img src='./img/arrow.svg' className='navigationImg' role='presentation'
             onClick={() => {activateNav()}} />
@@ -14,24 +14,24 @@ class Header extends Component {
           <img src='./img/menu.svg' className='navigationImg' role='presentation'
             onClick={() => {activateNav()}} />
         }
-        <h1 className={`header-title ${navActivated ? 'header-title-inactive' : null}`}>
+        <h4 className={`header-title ${navActivated ? 'header-title-inactive' : ''}`}>
           Blake Worsley
           <span className='header-title-span'>Front End Web Developer</span>
-        </h1>
-        <aside className={`header-aside ${navActivated ? 'header-aside-active' : null}`}>
+        </h4>
+        <aside className={`header-aside ${navActivated ? 'header-aside-active' : ''}`}>
           <nav className='header-nav'>
-            <h2 onClick={() => {activateAbout()}}
+            <h4 onClick={() => {activateAbout()}}
               className={`${aboutActivated ? 'selected-nav' : 'unselected-nav'}`}>About<span>
               <img src='./img/arrow-right.svg' className='selectedArrow' role='presentation'/>
-            </span></h2>
-            <h2 onClick={() => {activateProjects()}}
+            </span></h4>
+            <h4 onClick={() => {activateProjects()}}
               className={`${projectsActivated ? 'selected-nav' : 'unselected-nav'}`}>Projects<span>
               <img src='./img/arrow-right.svg' className='selectedArrow' role='presentation'/>
-            </span></h2>
-            <h2 onClick={() => {activateContact()}}
+            </span></h4>
+            <h4 onClick={() => {activateContact()}}
               className={`${contactActivated ? 'selected-nav' : 'unselected-nav'}`}>Contact<span>
               <img src='./img/arrow-right.svg' className='selectedArrow' role='presentation'/>
-            </span></h2>
+            </span></h4>
           </nav>
           <section className='header-bio'>
             <p>I am a front end web developer who was part fish in a previous life.</p>

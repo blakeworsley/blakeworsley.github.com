@@ -13,13 +13,13 @@
   flex-wrap: wrap;
   width: 25%;
   height: 25%;
-  font-family: $font-main;
+  // font-family: $font-main;
   transition: 1s ease-in-out 1s;
   color: $color-main-vibrant;
 }
 .tile {
   opacity: 0;
-  font-size: 0.4em;
+  // font-size: 0.4em;
   transition: 0.5s ease-in-out 0.5s;
 }
 

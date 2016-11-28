@@ -7,8 +7,8 @@ class Main extends Component {
       projectsActivated, contactActivated, activateAbout,
       activateProjects, activateContact, activateHome } = this.props;
     return (
-      <section className={`Main ${navActivated ? 'Main-active' : null} ${
-        (aboutActivated || projectsActivated || contactActivated) ? 'maximize-main' : null}`}>
+      <section className={`Main ${navActivated ? 'Main-active' : ''} ${
+        (aboutActivated || projectsActivated || contactActivated) ? 'maximize-main' : ''}`}>
         <section className='main-container'>
           {navActivated ?
             <div className='main-fade-out'

@@ -1,21 +1,21 @@
 /*
-Error: Undefined variable: "$font-main".
-        on line 9 of ./src/styles/scss/header.scss
+Error: Undefined variable: "$transition-main".
+        on line 19 of ./src/styles/scss/header.scss
 
-4:   width: 50px;
-5:   bottom: 0;
-6:   top: 0;
-7:   left: 0;
-8:   margin: 10px 0px;
-9:   font-family: $font-main;
-10:   font-size: 16px;
-11:   line-height: 30px;
-12:   overflow-y: scroll;
-13: }
-14: 
+14:   letter-spacing: 0.1em;
+15:   position: fixed;
+16:   font-size: 1em;
+17:   top: 280px;
+18:   left: -165px;
+19:   transition: $transition-main;
+20:   transform: rotate(270deg);
+21:   -webkit-transform: rotate(270deg);
+22:   -moz-transform: rotate(270deg);
+23:   -o-transform: rotate(270deg);
+24:   -ms-transform: rotate(270deg);
 
 Backtrace:
-./src/styles/scss/header.scss:9
+./src/styles/scss/header.scss:19
 /Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/script/tree/variable.rb:49:in `_perform'
 /Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/script/tree/node.rb:58:in `perform'
 /Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:397:in `visit_prop'
@@ -68,4 +68,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$font-main\".\A         on line 9 of ./src/styles/scss/header.scss\A \A 4:   width: 50px;\A 5:   bottom: 0;\A 6:   top: 0;\A 7:   left: 0;\A 8:   margin: 10px 0px;\A 9:   font-family: $font-main;\A 10:   font-size: 16px;\A 11:   line-height: 30px;\A 12:   overflow-y: scroll;\A 13: }\A 14: "; }
+  content: "Error: Undefined variable: \"$transition-main\".\A         on line 19 of ./src/styles/scss/header.scss\A \A 14:   letter-spacing: 0.1em;\A 15:   position: fixed;\A 16:   font-size: 1em;\A 17:   top: 280px;\A 18:   left: -165px;\A 19:   transition: $transition-main;\A 20:   transform: rotate(270deg);\A 21:   -webkit-transform: rotate(270deg);\A 22:   -moz-transform: rotate(270deg);\A 23:   -o-transform: rotate(270deg);\A 24:   -ms-transform: rotate(270deg);"; }

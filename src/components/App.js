@@ -52,7 +52,7 @@ class App extends Component {
   render() {
     const { navActivated, aboutActivated, projectsActivated, contactActivated } = this.state;
     return (
-      <div className={`App ${(aboutActivated || projectsActivated || contactActivated) ? 'component-active' : null}`}>
+      <div className={`App ${(aboutActivated || projectsActivated || contactActivated) ? 'component-active' : ''}`}>
         <Header activateNav={ () => this.activateNav()}
           navActivated={navActivated}
           aboutActivated={aboutActivated}
