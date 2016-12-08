@@ -3,7 +3,7 @@
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  background: url(../../../public/img/steamboat-barn.jpg) no-repeat fixed;
+  background: url(../../../public/img/blake.png) no-repeat fixed;
   background-size: cover;
 }
 .tile-container {
@@ -13,41 +13,40 @@
   flex-wrap: wrap;
   width: 25%;
   height: 25%;
-  // font-family: $font-main;
   transition: 1s ease-in-out 1s;
   color: $color-main-vibrant;
 }
 .tile {
   opacity: 0;
-  // font-size: 0.4em;
   transition: 0.5s ease-in-out 0.5s;
 }
 
 .tile-container:hover .tile{
   opacity: 1;
-  transition: $transition-main ease-in-out 0s;
+  font-size: 1.2em;
+  transition: $transition-medium ease-in-out 0s;
 }
 .tile-container:hover {
   background: rgb(52, 52, 52);
   overflow: hidden;
   z-index: 3;
-  background: url(../../../public/img/steamboat-barn.jpg) no-repeat fixed;
+  background: url(../../../public/img/blake.png) no-repeat fixed;
   background-size: cover;
 }
 .tile-1 {
-  background: $color-light;
+  background: opacify($color-light, 0.2);
   color: $color-light-medium;
 }
 .tile-2 {
-  background: $color-light-medium;
+  background: opacify($color-light-medium, 0.2);
   color: $color-medium;
 }
 .tile-3 {
-  background: $color-medium;
+  background: opacify($color-medium, 0.2);
   color: $color-medium-dark;
 }
 .tile-4 {
-  background: $color-medium-dark;
+  background: opacify($color-medium-dark, 0.2);
   color: $color-dark;
 }
 
