@@ -35,19 +35,19 @@
 }
 .tile-1 {
   background: opacify($color-light, 0.2);
-  color: $color-light-medium;
+  color: $color-main-vibrant;
 }
 .tile-2 {
   background: opacify($color-light-medium, 0.2);
-  color: $color-medium;
+  color: $color-main-vibrant;
 }
 .tile-3 {
   background: opacify($color-medium, 0.2);
-  color: $color-medium-dark;
+  color: $color-main-vibrant;
 }
 .tile-4 {
   background: opacify($color-medium-dark, 0.2);
-  color: $color-dark;
+  color: $color-main-vibrant;
 }
 
 .tile-container:hover {
