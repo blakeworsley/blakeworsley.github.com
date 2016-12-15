@@ -1,0 +1,10 @@
+deployment:
+  staging:
+    branch: staging
+    heroku:
+      appname: blakeworsley-staging
+deployment:
+  staging:
+    branch: gh-pages
+    heroku:
+      appname: blakeworsley
