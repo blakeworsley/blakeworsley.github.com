@@ -1,0 +1,171 @@
+// COLOR
+$color-base: white;
+$color-lighter: darken($color-base, 7);
+$color-light: darken($color-base, 15);
+$color-light-medium: darken($color-base, 30);
+$color-medium: darken($color-base, 45);
+$color-medium-dark: darken($color-base, 60);
+$color-dark: darken($color-base, 75);
+$color-darker: darken($color-base, 85);
+$color-main-vibrant: rgb(121, 255, 227);
+$color-main-secondary: rgb(255, 178, 29);
+
+// FONT
+$font-main: 'Lato', sans-serif;
+$font-size-large: 3em;
+$font-size-large-medium: 2.5em;
+$font-size-large-small: 2em;
+$font-size-medium-large: 1.4em;
+$font-size-medium: 1.3em;
+$font-size-medium-small: 1.2em;
+$font-size-small-large: 1em;
+$font-size-small-medium: 0.9em;
+$font-size-small: 0.8em;
+
+
+// GRADIENTS
+
+
+// MARGINS
+$margin-main: 10px 10px 10px 50px;
+$margin-main-maximized: 10px;
+$margin-main-selected: 20px 20px 20px 300px;
+
+// IMGS
+
+
+
+// MIXINS
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin shadow-main-inner {
+  box-shadow: 4px 4px 10px 0 rgba(0,0,0,0.20);
+}
+
+@mixin shadow-main-outer {
+  box-shadow: inset 3px 3px 10px 0 rgba(0,0,0,0.20);
+}
+
+@mixin shadow-screen-glow {
+  box-shadow: 0 0 150px 25px rgba(238, 254, 255, 0.5), inset 0 0 35px 5px rgba(239,254,255,0.10);
+}
+
+//EFFECTS
+$transition-main: 0.25s;
+$transition-fast: 0.1s;
+$transition-medium: 0.5s;
+$transition-slow: 2s;
+
+
+//DEFAULT
+html {
+  font-family: $font-main;
+}
+h1 {
+  font-family: $font-main;
+  font-size: $font-size-large;
+  color: $color-dark;
+  font-style: bold;
+  text-transform: uppercase;
+}
+h2 {
+  font-family: $font-main;
+  font-size: $font-size-large-medium;
+  color: $color-dark;
+  text-transform: uppercase;
+}
+h3 {
+  font-family: $font-main;
+  font-size: $font-size-large-small;
+  color: $color-dark;
+  font-style: italic;
+  text-transform: uppercase;
+}
+h4 {
+  font-family: $font-main;
+  font-size: $font-size-medium-large;
+  color: $color-dark;
+  padding: 12.5px 0;
+}
+p {
+  font-family: $font-main;
+  font-size: $font-size-small-large;
+  color: $color-dark;
+}
+a {
+  font-family: $font-main;
+  font-size: $font-size-small-large;
+  color: $color-dark;
+  font-style: italic;
+  text-transform: uppercase;
+}
+
+input, textarea {
+  background: $color-light-medium;
+  border-radius: 8px;
+  border: none;
+  padding: 10px 20px;
+  font-size: $font-size-small-large;
+  color: $color-dark;
+}
+input::placeholder, textarea::placeholder {
+  color: $color-light;
+}
+input:focus, textarea:focus {
+  outline: none;
+  border: 5px solid $color-main-vibrant;
+  background: $color-base;
+  padding: 5px 15px;
+}
+button {
+  background: $color-dark;
+  border-radius: 8px;
+  border: none;
+  padding: 10px 20px;
+  font-size: $font-size-small-large;
+  color: $color-base;
+  outline: none;
+  text-transform: uppercase;
+}
+button:disabled, button:disabled button:focus {
+  background: $color-light-medium;
+  color: $color-dark;
+}
+button:hover, button:focus {
+  background: $color-main-vibrant;
+  color: $color-dark;
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: $font-size-medium;
+  }
+  h2 {
+    font-size: $font-size-medium-small;
+  }
+  h3 {
+    font-size: $font-size-small-large;
+  }
+  h4 {
+    font-size: $font-size-small-large;
+  }
+  p {
+    font-size: $font-size-small-medium;
+  }
+  a {
+    font-size: $font-size-small-medium;
+  }
+
+  input {
+    font-size: $font-size-small-medium;
+  }
+  button {
+    font-size: $font-size-small-medium;
+  }
+
+}

@@ -1,0 +1,128 @@
+.computer-browser {
+  background: $color-lighter;
+  margin-top: 20px;
+  border-radius: 3px;
+  height: 80%;
+  width: 75%;
+  transition: $transition-main;
+  @include shadow-main-inner;
+  nav {
+    display: flex;
+    align-items: center;
+    padding-left: 2%;
+    height: 5%;
+    background: $color-light;
+    border-radius: 3px 3px 0px 0px;
+  }
+}
+
+.computer-browser-fullscreen {
+  width: 100%;
+  height: 90%;
+  margin-top: 0px;
+  box-shadow: none;
+}
+
+.computer-browser-minimize {
+  visibility: hidden;
+  opacity: 0;
+  margin-top: 300px;
+  width: 0px;
+  height: 0px;
+  transition: $transition-main;
+}
+
+
+.computer-browser-nav-button {
+  margin-left: 3px;
+  height: 7px;
+  width: 7px;
+  border-radius: 50%;
+  background: $color-medium;
+}
+
+.nav-red-button {
+  background: rgb(232, 90, 90);
+}
+.nav-yellow-button {
+  background: rgb(222, 202, 26);
+}
+.nav-green-button {
+  background: rgb(88, 200, 82);
+}
+.computer-application {
+  overflow-y: scroll;
+  background: #fff;
+  height: 95%;
+  display: flex;
+}
+
+.computer-app-selection {
+  @include flex-center;
+  margin-top: auto;
+  width: 80%;
+  background: $color-lighter;
+  opacity: 0.8;
+  overflow-y: hidden;
+  overflow-x: scroll;
+}
+
+.computer-app-selection-li {
+  @include flex-center;
+  flex-wrap: wrap;
+  height: 95%;
+  padding: 5px;
+  margin: 5px;
+  border-radius: 2px;
+  background: $color-light-medium;
+  color: $color-base;
+  transition: $transition-main;
+}
+
+.computer-app-selection-li:hover {
+  @include shadow-main-inner;
+  margin-top: -2px;
+  background: $color-main-vibrant;
+  color: $color-darker;
+}
+
+.computer-app-selection-selected {
+  @include shadow-main-inner;
+  background: $color-main-vibrant;
+  color: $color-darker;
+}
+
+
+@media (max-width: 600px) {
+  .computer-browser {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    border-radius: 0px;
+    margin-top: 0px;
+    @include shadow-main-outer;
+    nav {
+      border-radius: 0px;
+    }
+  }
+  .computer-app-selection {
+    width: 100%;
+    justify-content: flex-start;
+    background: none;
+    overflow-y: scroll;
+  }
+  .nav-yellow-button {
+    display: none;
+    visibility: hidden;
+    opacity: 0;
+  }
+  .nav-green-button {
+    display: none;
+    visibility: hidden;
+    opacity: 0;
+  }
+  .computer-application {
+    display: block;
+  }
+}
