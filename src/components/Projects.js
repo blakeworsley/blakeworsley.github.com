@@ -5,7 +5,7 @@ class Projects extends Component {
   constructor() {
     super();
     this.state = {
-      computerOpen: false
+      computerOpen: true
     };
   }
 
@@ -17,7 +17,7 @@ class Projects extends Component {
 
   render() {
     const { activateHome } = this.props;
-    const { computerOpen } = this.state;
+    const { computerOpen } = this.state;    
 
     return (
       <section className='component-full-screen'>
@@ -41,3 +41,8 @@ class Projects extends Component {
 }
 
 export default Projects;
+
+
+
+// computerOpen || (window.innerWidth <= 600))
+              // { (window.innerWidth <= 600)? this.setState({computerOpen: true}) : null}

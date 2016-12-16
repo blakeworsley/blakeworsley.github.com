@@ -34,7 +34,9 @@ class Rows extends Component {
                 activateProjects={activateProjects}
                 activateHome={activateHome}
               />
-              : <h1 onClick={() => {activateProjects()}} className='expandable-title'>PROJECTS</h1>
+              : <section onClick={() => {activateProjects()}} className='expandable-title'>
+                  <div className='row-hover-effect'><h1 className='category-title'>PROJECTS</h1></div>
+                </section>
             )
           }
         </section>
@@ -47,7 +49,9 @@ class Rows extends Component {
                 activateContact={activateContact}
                 activateHome={activateHome}
               />
-              : <h1 onClick={() => {activateContact()}} className='expandable-title'>CONTACT</h1>
+              : <section onClick={() => {activateContact()}} className='expandable-title'>
+                  <div className='row-hover-effect'><h1 className='category-title'>CONTACT</h1></div>
+                </section>
             )
           }
         </section>
