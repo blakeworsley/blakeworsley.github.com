@@ -50,11 +50,49 @@
   z-index: 2;
 }
 
+.project-live, .project-code {
+  display: flex;
+  flex: 1;
+  overflow-y: scroll;
+  a {
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    font-style: inherit;
+    text-transform: inherit;
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.project-code {
+  background: $color-dark;
+  flex-direction: column;
+  padding: 10px;
+  h4, a {
+    color: $color-light;
+  }
+  p{
+    color: $color-main-vibrant;  
+  }
+}
+.project-live:hover, .project-code:hover {
+  opacity: 0.8;
+  transition: $transition-main;
+  content: 'CODE';
+}
 .project-screenshot {
   width: 100%;
   height: 100%;
+}
+.blue-screenshot {
   background: url(../../../public/img/blue-screenshot.png);
-  background-size: cover;
+  background-size: cover;  
+}
+.gains-screenshot {
+  background: url(../../../public/img/gains-screenshot.png);
+  background-size: cover;  
 }
 
 .project-header {
@@ -80,8 +118,15 @@
     opacity: 0;
     width: 0;
   }
-  .project-screenshot {
+  .blue-screenshot {
     background: url(../../../public/img/blue-screenshot-mobile.png);
-    background-size: cover;
+    background-size: cover;  
+  }
+  .gains-screenshot {
+    background: url(../../../public/img/gains-screenshot-mobile.png);
+    background-size: cover;  
+  }
+  .project-live {
+    height: 100%;
   }
 }

@@ -60,7 +60,12 @@
   color: $color-main-vibrant;
   background: url(../../../public/img/steamboat-barn.jpg) no-repeat fixed;
   background-size: cover;
-  // background: $color-main-vibrant;
+}
+
+.category-title {
+  color: $color-main-vibrant;  
+  padding: 15px;
+  background: $color-darker;
 }
 
 

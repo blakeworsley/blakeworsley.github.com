@@ -19,10 +19,10 @@ class Tiles extends Component {
         <article className='tile-container tile-3'><div className='tile'>Walking Dead</div></article>
         <article className='tile-container tile-3'><div className='tile'>Westworld</div></article>
 
-        <article className='tile-container tile-4'><div className='tile'>outside</div></article>
-        <article className='tile-container tile-4'><div className='tile'>during</div></article>
-        <article className='tile-container tile-4'><div className='tile'>harsh</div></article>
-        <article className='tile-container tile-4'><div className='tile'>winters</div></article>
+        <article className='tile-container tile-4'><div className='tile'>The Incline</div></article>
+        <article className='tile-container tile-4'><div className='tile'>Shredding</div></article>
+        <article className='tile-container tile-4'><div className='tile'>Gym</div></article>
+        <article className='tile-container tile-4'><div className='tile'>Fresh Air</div></article>
       </section>
     );
   }

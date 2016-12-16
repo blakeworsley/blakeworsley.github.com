@@ -105,7 +105,7 @@ a {
   text-transform: uppercase;
 }
 
-input {
+input, textarea {
   background: $color-light-medium;
   border-radius: 8px;
   border: none;
@@ -113,10 +113,10 @@ input {
   font-size: $font-size-small-large;
   color: $color-dark;
 }
-input::placeholder {
+input::placeholder, textarea::placeholder {
   color: $color-light;
 }
-input:focus {
+input:focus, textarea:focus {
   outline: none;
   border: 5px solid $color-main-vibrant;
   background: $color-base;

@@ -19,9 +19,9 @@ class Rows extends Component {
                 activateAbout={activateAbout}
                 activateHome={activateHome}
               />
-              : <h1 onClick={() => {activateAbout()}} className='expandable-title'>
-                <div className='row-hover-effect'></div>
-                ABOUT</h1>
+              : <section onClick={() => {activateAbout()}} className='expandable-title'>
+                <div className='row-hover-effect'><h1 className='category-title'>ABOUT</h1></div>
+                </section>
             )
           }
         </section>

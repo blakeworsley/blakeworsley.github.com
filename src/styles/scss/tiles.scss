@@ -23,7 +23,8 @@
 
 .tile-container:hover .tile{
   opacity: 1;
-  font-size: 1.2em;
+  padding: 10px;
+  background: $color-darker;
   transition: $transition-medium ease-in-out 0s;
 }
 .tile-container:hover {
