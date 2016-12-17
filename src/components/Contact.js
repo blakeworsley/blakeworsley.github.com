@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 class Contact extends Component {
   render() {
-    const { activateHome, activateContact, contactActivated } = this.props;
+    const { activateHome } = this.props;
     return (
       <section className='component-full-screen'>
         <header className='component-full-screen-header' onClick={() => {activateHome()}}>
@@ -10,11 +10,12 @@ class Contact extends Component {
           BACK
         </header>
         <section className='component-full-screen-content'>
-          <h1>CONTACT ME</h1>
           <form>
-            <label>Your Email: <input type="text" /></label>
-            <label>What do you want?: <input type="text" /></label>
-            <a href='mailto:blakeworsley@gmail.com'><button>Send</button></a>
+            <h2>CONTACT ME</h2>
+            <label><h4>Your Email: </h4><input type="text" placeholder='Email Address Here'/></label>
+            <label><h4>What do you want?: </h4><textarea type="text" placeholder='What do you want from me?'/></label>
+            <br/>
+            <button onClick={ (e) => e.preventDefault()}>Submit</button>
           </form>
         </section>
       </section>

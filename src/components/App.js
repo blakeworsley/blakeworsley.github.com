@@ -20,27 +20,21 @@ class App extends Component {
   }
 
   activateAbout(){
-    this.state.navActivated ? this.setState({navActivated: false}) : null;
-    this.state.projectsActivated ? this.setState({projectsActivated: false}) : null;
-    this.state.contactActivated ? this.setState({contactActivated: false}) : null;
+    this.activateHome();
     this.state.aboutActivated ?
     this.setState({aboutActivated: false}) :
     this.setState({aboutActivated: true});
   }
 
   activateProjects(){
-    this.state.navActivated ? this.setState({navActivated: false}) : null;
-    this.state.aboutActivated ? this.setState({aboutActivated: false}) : null;
-    this.state.contactActivated ? this.setState({contactActivated: false}) : null;
+    this.activateHome();
     this.state.projectsActivated ?
     this.setState({projectsActivated: false}) :
     this.setState({projectsActivated: true});
   }
 
   activateContact(){
-    this.state.navActivated ? this.setState({navActivated: false}) : null
-    this.state.aboutActivated ? this.setState({aboutActivated: false}) : null
-    this.state.projectsActivated ? this.setState({projectsActivated: false}) : null
+    this.activateHome();
     this.state.contactActivated ?
     this.setState({contactActivated: false}) :
     this.setState({contactActivated: true});
@@ -56,28 +50,27 @@ class App extends Component {
   }
 
   render() {
-    const { navActivated, aboutActivated, projectsActivated,
-      contactActivated, activateAbout, activateProjects, activateContact } = this.state;
+    const { navActivated, aboutActivated, projectsActivated, contactActivated } = this.state;
     return (
-      <div className={`App ${(aboutActivated || projectsActivated || contactActivated) ? 'component-active' : null}`}>
-        <Header activateNav={ () => { this.activateNav() }}
+      <div className={`App ${(aboutActivated || projectsActivated || contactActivated) ? 'component-active' : ''}`}>
+        <Header activateNav={ () => this.activateNav()}
           navActivated={navActivated}
           aboutActivated={aboutActivated}
-          activateAbout={() => {this.activateAbout()}}
+          activateAbout={() => this.activateAbout()}
           projectsActivated={projectsActivated}
-          activateProjects={() => {this.activateProjects()}}
+          activateProjects={() => this.activateProjects()}
           contactActivated={contactActivated}
-          activateContact={() => {this.activateContact()}}
+          activateContact={() => this.activateContact()}
         />
-        <Main activateNav={ () => { this.activateNav() }}
+        <Main activateNav={ () => this.activateNav()}
           navActivated={navActivated}
           aboutActivated={aboutActivated}
-          activateAbout={() => {this.activateAbout()}}
+          activateAbout={() => this.activateAbout()}
           projectsActivated={projectsActivated}
-          activateProjects={() => {this.activateProjects()}}
+          activateProjects={() => this.activateProjects()}
           contactActivated={contactActivated}
-          activateContact={() => {this.activateContact()}}
-          activateHome={() => {this.activateHome()}}
+          activateContact={() => this.activateContact()}
+          activateHome={() => this.activateHome()}
         />
       </div>
     );

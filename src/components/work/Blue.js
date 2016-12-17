@@ -2,25 +2,26 @@ import React, { Component } from 'react';
 
 class Blue extends Component {
   render() {
-    const { closeWindow } = this.props;
     return (
-      <div className='computer-browser'>
-        <nav>
-          <div className='computer-browser-nav-button nav-red-button'
-            onClick={() => closeWindow()}></div>
-          <div className='computer-browser-nav-button nav-yellow-button'></div>
-          <div className='computer-browser-nav-button nav-green-button'></div>
-        </nav>
-        <section className='computer-application'>
-          <h1 className='project-header'>Blue Coach</h1>
-          <p className='project-content'>
-            Designed to help swimmers communicate with their Coaches to
-            prevent overtraining. This is the Coach Dashboard version of the website
-          </p>
+      <section className='computer-application'>
+        <section className='project-live'>
+          <a href='https://blue-d8d04.firebaseapp.com/'>
+            <div className='project-screenshot blue-screenshot'></div>      
+          </a>
         </section>
-      </div>
+        <section className='project-code'>
+          <a href='https://github.com/blakeworsley/BlueCoach'>              
+            <h4 className='project-header'>Blue Coach</h4>
+            <p className='project-content'>
+              Designed to help swimmers communicate with their Coaches to
+              prevent overtraining. This is the Coach Dashboard version of the website
+            </p>
+          </a>
+        </section>
+      </section>
     );
   }
 }
 
 export default Blue;
+
