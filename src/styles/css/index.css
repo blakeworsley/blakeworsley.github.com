@@ -697,4 +697,23 @@ button:hover, button:focus {
   padding: 15px;
   background: #262626; }
 
+.submit-button {
+  background: #404040;
+  border-radius: 8px;
+  border: none;
+  max-width: 100px;
+  padding: 10px 20px;
+  font-size: 1em;
+  color: white;
+  outline: none;
+  text-transform: uppercase; }
+
+.submit-button:hover, .submit-button:focus {
+  background: #79ffe3;
+  color: #404040; }
+
+.submit-button:disabled, .submit-button:disabled .submit-button:hover .submit-button:focus {
+  background: #b3b3b3;
+  color: #8c8c8c; }
+
 /*# sourceMappingURL=index.css.map */

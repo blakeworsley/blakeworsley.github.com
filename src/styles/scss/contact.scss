@@ -1,0 +1,21 @@
+.submit-button {
+  background: $color-dark;
+  border-radius: 8px;
+  border: none;
+  max-width: 100px;
+  padding: 10px 20px;
+  font-size: $font-size-small-large;
+  color: $color-base;
+  outline: none;
+  text-transform: uppercase;
+}
+
+.submit-button:hover, .submit-button:focus {
+  background: $color-main-vibrant;
+  color: $color-dark;
+}
+
+.submit-button:disabled, .submit-button:disabled .submit-button:hover .submit-button:focus {
+  background: $color-light-medium;
+  color: $color-medium;
+}

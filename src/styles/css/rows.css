@@ -8,11 +8,11 @@ Error: Undefined variable: "$color-base".
 7:   width       : 100%;
 8:   height      : 24.3vh;
 9:   color       : $color-base;
-10:   // font-family : $font-main;
-11:   // font-size   : 3.5em;
-12:   transition  : 0.3s;
-13: }
-14: 
+10:   transition  : 0.3s;
+11: }
+12: 
+13: .row-1 {
+14:   height     : 48.6vh;
 
 Backtrace:
 ./src/styles/scss/rows.scss:9
@@ -65,4 +65,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$color-base\".\A         on line 9 of ./src/styles/scss/rows.scss\A \A 4: }\A 5: \A 6: .row {\A 7:   width       : 100%;\A 8:   height      : 24.3vh;\A 9:   color       : $color-base;\A 10:   // font-family : $font-main;\A 11:   // font-size   : 3.5em;\A 12:   transition  : 0.3s;\A 13: }\A 14: "; }
+  content: "Error: Undefined variable: \"$color-base\".\A         on line 9 of ./src/styles/scss/rows.scss\A \A 4: }\A 5: \A 6: .row {\A 7:   width       : 100%;\A 8:   height      : 24.3vh;\A 9:   color       : $color-base;\A 10:   transition  : 0.3s;\A 11: }\A 12: \A 13: .row-1 {\A 14:   height     : 48.6vh;"; }
