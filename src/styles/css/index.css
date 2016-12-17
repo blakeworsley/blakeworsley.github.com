@@ -348,8 +348,8 @@ button:hover, button:focus {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  background: url(../../../public/img/blake.png) no-repeat fixed;
-  background-size: cover; }
+  background: url(../../../public/img/blake.png) top center no-repeat;
+  background-size: contain; }
 
 .tile-container {
   display: flex;
@@ -372,11 +372,10 @@ button:hover, button:focus {
   transition: 0.5s ease-in-out 0s; }
 
 .tile-container:hover {
-  background: #343434;
   overflow: hidden;
   z-index: 3;
-  background: url(../../../public/img/blake.png) no-repeat fixed;
-  background-size: cover; }
+  background: transparent;
+  background-size: contain; }
 
 .tile-1 {
   background: #d9d9d9;
@@ -397,6 +396,38 @@ button:hover, button:focus {
 .tile-container:hover {
   transition: 0.25s ease-in-out 0s; }
 
+.tile-container:nth-child(1):hover {
+  background: url(../../../public/img/swimmer.svg) center no-repeat;
+  background-size: contain; }
+
+.tile-container:nth-child(2):hover {
+  background: url(../../../public/img/blake.png) center no-repeat;
+  background-size: contain; }
+
+.tile-container:nth-child(3):hover {
+  background: url(../../../public/img/blake.png) center no-repeat;
+  background-size: contain; }
+
+.tile-container:nth-child(4):hover {
+  background: url(../../../public/img/blake.png) center no-repeat;
+  background-size: contain; }
+
+@media (max-width: 600px) {
+  .Tiles {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    background: url(../../../public/img/blake.png) no-repeat fixed;
+    background-size: cover; }
+
+  .tile-container:hover {
+    overflow: hidden;
+    z-index: 3;
+    background: transparent; }
+
+  .tile {
+    transform: rotate(-90deg); } }
 .Projects {
   display: flex;
   justify-content: center;
