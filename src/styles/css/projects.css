@@ -7,9 +7,9 @@ Error: Undefined mixin 'flex-center'.
 2:   @include flex-center;
 3:   height: 100%;
 4:   width: 100%;
-5:   background: $color-light-medium;
-6:   background-size: cover;
-7:   overflow-y: scroll;
+5:   background-size: cover;
+6:   overflow-y: scroll;
+7:   flex-direction: column;
 
 Backtrace:
 ./src/styles/scss/projects.scss:2:in `flex-center'
@@ -65,4 +65,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined mixin 'flex-center'.\A         on line 2 of ./src/styles/scss/projects.scss, in `flex-center'\A         from line 2 of ./src/styles/scss/projects.scss\A \A 1: .Projects {\A 2:   @include flex-center;\A 3:   height: 100%;\A 4:   width: 100%;\A 5:   background: $color-light-medium;\A 6:   background-size: cover;\A 7:   overflow-y: scroll;"; }
+  content: "Error: Undefined mixin 'flex-center'.\A         on line 2 of ./src/styles/scss/projects.scss, in `flex-center'\A         from line 2 of ./src/styles/scss/projects.scss\A \A 1: .Projects {\A 2:   @include flex-center;\A 3:   height: 100%;\A 4:   width: 100%;\A 5:   background-size: cover;\A 6:   overflow-y: scroll;\A 7:   flex-direction: column;"; }

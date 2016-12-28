@@ -25,9 +25,9 @@ class Projects extends Component {
           <img src='./img/arrow.svg' className='back-to-home' role='presentation'/>
           BACK
         </header>
-        <button className='activate-computer-button'  onClick={() => {this.activateComputer()}}>
+        <section className='Projects component-full-screen-content component-full-screen-content-2'>
+                <button className='activate-computer-button'  onClick={() => {this.activateComputer()}}>
           {computerOpen ? 'CLOSE' : 'OPEN'}</button>
-        <section className='Projects'>
           <div className='computer'>
             <div className={`computer-back ${computerOpen ? 'computer-back-open' : null}`}>
               <ComputerScreen computerOpen={computerOpen} />

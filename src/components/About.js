@@ -10,7 +10,7 @@ class About extends Component {
           <img src='./img/arrow.svg' className='back-to-home' role='presentation'/>
           BACK
         </header>
-        <section className='component-full-screen-content'>
+        <section className='component-full-screen-content component-full-screen-content-1'>
           <Tiles />
         </section>
       </section>

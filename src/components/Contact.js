@@ -17,7 +17,7 @@ class Contact extends Component {
           <img src='./img/arrow.svg' className='back-to-home' role='presentation'/>
           BACK
         </header>
-        <section className='component-full-screen-content'>
+        <section className='component-full-screen-content component-full-screen-content-3'>
           <form action="https://formspree.io/blakeworsley@gmail.com"
             method="POST">
             <h2>CONTACT ME</h2>
