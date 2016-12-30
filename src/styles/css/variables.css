@@ -52,7 +52,7 @@ input::placeholder, textarea::placeholder {
 
 input:focus, textarea:focus {
   outline: none;
-  border: 5px solid #29D9C2;
+  border: 5px solid #3DD4D0;
   background: white;
   padding: 5px 15px; }
 
@@ -71,7 +71,7 @@ button:disabled, button:disabled button:focus {
   color: #404040; }
 
 button:hover, button:focus {
-  background: #29D9C2;
+  background: #3DD4D0;
   color: #404040; }
 
 @media (max-width: 600px) {

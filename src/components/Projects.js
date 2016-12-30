@@ -41,8 +41,3 @@ class Projects extends Component {
 }
 
 export default Projects;
-
-
-
-// computerOpen || (window.innerWidth <= 600))
-              // { (window.innerWidth <= 600)? this.setState({computerOpen: true}) : null}

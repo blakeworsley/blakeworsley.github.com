@@ -16,10 +16,10 @@ class Tiles extends Component {
 
         <article className='tile-container tile-3'><div className='tile'>Skier</div></article>
         <article className='tile-container tile-3'><div className='tile'>Designer</div></article>
-        <article className='tile-container tile-3'><div className='tile'>Photoshoper</div></article>
+        <article className='tile-container tile-3'><div className='tile'>Photoshopper</div></article>
         <article className='tile-container tile-3'><div className='tile'>Incliner</div></article>
 
-        <article className='tile-container tile-4'><div className='tile'>The Incline</div></article>
+        <article className='tile-container tile-4'><div className='tile'>American</div></article>
         <article className='tile-container tile-4'><div className='tile'>Adventurer</div></article>
         <article className='tile-container tile-4'><div className='tile'>Athlete</div></article>
         <article className='tile-container tile-4'><div className='tile'>Canadian</div></article>

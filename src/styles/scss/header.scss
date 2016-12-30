@@ -89,6 +89,24 @@
   padding: 10px 106px;
 }
 
+.social-icons {
+  text-align: center;
+}
+
+.social-logo {
+  height: 30px;
+  width: 30px;
+  margin: 5px;
+  display: inline-block;
+  transition: $transition-fast;
+}
+
+.social-logo:hover{
+  height: 35px;
+  width: 35px;
+  margin: 2.5px;
+}
+
 .selectedArrow {
   opacity: 0;
   transition: $transition-main;

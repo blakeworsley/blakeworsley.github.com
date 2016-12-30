@@ -34,8 +34,15 @@ class Header extends Component {
             </span></h4>
           </nav>
           <section className='header-bio'>
-            <p>I am a front end web developer who was part fish in a previous life.</p>
-            <p>Contact me below if you interested in some freelance web or design work.</p>
+            <p className='social-icons'>
+              <a href='http://codepen.io/blakeworsley/'><img src='./img/social/Codepen-black.svg' className='social-logo' role='presentation'/></a>
+              <a href='https://github.com/blakeworsley'><img src='./img/social/Github-black.svg' className='social-logo' role='presentation'/></a>
+              <a href='https://medium.com/@blakeworsley'><img src='./img/social/Medium-black.svg' className='social-logo' role='presentation'/></a>
+              <a href='https://twitter.com/blakeworsley'><img src='./img/social/Twitter-black.svg' className='social-logo' role='presentation'/></a>
+            </p>
+            <p>I am a Front End Web Developer and former Olympic Swimmer</p>
+            <p>Currently looking for web development and design work.</p>
+            
           </section>
           <img src='./img/logo.svg' className='header-logo' role='presentation'/>
         </aside>

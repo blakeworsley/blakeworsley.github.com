@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ColorPicker from './work/ColorPicker';
 import Blue from './work/Blue';
 import Remember from './work/Remember';
 import Gains from './work/Gains';
@@ -8,6 +9,7 @@ class ComputerScreen extends Component {
   constructor() {
     super();
     this.state = {
+      colorPickerActivated: false,
       blueActivated: false,
       gainsActivated: false,
       rememberActivated: false,
@@ -19,6 +21,7 @@ class ComputerScreen extends Component {
 
   closeWindow(){
     this.setState({
+      colorPickerActivated: false,
       blueActivated: false,
       gainsActivated: false,
       rememberActivated: false,
@@ -37,40 +40,25 @@ class ComputerScreen extends Component {
     this.setState({computerWindowMinimized: true});
   }
 
-  activateBlue(){
+  activateWork(activeComponent){
     this.closeWindow();
-    this.state.blueActivated ?
-    this.setState({blueActivated: false, computerWindowMinimized: false}) :
-    this.setState({blueActivated: true, computerWindowMinimized: false});
-  }
-
-  activateGains(){
-    this.closeWindow();
-    this.state.gainsActivated ?
-    this.setState({gainsActivated: false, computerWindowMinimized: false}) :
-    this.setState({gainsActivated: true, computerWindowMinimized: false});
-  }
-
-  activatePortfolio(){
-    this.closeWindow();
-    this.state.portfolioActivated ?
-    this.setState({portfolioActivated: false, computerWindowMinimized: false}) :
-    this.setState({portfolioActivated: true, computerWindowMinimized: false});
-  }
-
-  activateRemember(){
-    this.closeWindow();
-    this.state.rememberActivated ?
-    this.setState({rememberActivated: false, computerWindowMinimized: false}) :
-    this.setState({rememberActivated: true, computerWindowMinimized: false});
+    let activeState = {}
+      activeState[activeComponent] = true;
+      activeState.computerWindowMinimized = false;
+    let inactiveState = {}
+      inactiveState[activeComponent] = false;
+      inactiveState.computerWindowMinimized = false;
+    this.state[activeComponent] ?
+    this.setState(inactiveState) :
+    this.setState(activeState)
   }
 
   render() {
-    const { computerFullscreenActivated, computerWindowMinimized,
+    const { computerFullscreenActivated, computerWindowMinimized, colorPickerActivated,
        blueActivated, gainsActivated, rememberActivated, portfolioActivated } = this.state;
     return (
       <section className='computer-screen'>
-        { (blueActivated || gainsActivated || rememberActivated || portfolioActivated) ?
+        { (colorPickerActivated || blueActivated || gainsActivated || rememberActivated || portfolioActivated) ?
           <div className={`computer-browser ${computerFullscreenActivated ? 'computer-browser-fullscreen' : ''} ${computerWindowMinimized ? 'computer-browser-minimize' : ''}`}>
             <nav>
               <div className='computer-browser-nav-button nav-red-button'
@@ -80,6 +68,7 @@ class ComputerScreen extends Component {
               <div className='computer-browser-nav-button nav-green-button'
                 onClick={() => this.fullscreenActivated()}></div>
             </nav>
+              {colorPickerActivated ? <ColorPicker /> : null}
               {blueActivated ? <Blue /> : null}
               {rememberActivated ? <Remember /> : null}
               {gainsActivated ? <Gains /> : null}
@@ -89,16 +78,19 @@ class ComputerScreen extends Component {
         }
 
         <ul className='computer-app-selection'>
-          <li onClick={() => this.activateBlue()}
+          <li onClick={() => this.activateWork('colorPickerActivated')}
+            className={`computer-app-selection-li ${colorPickerActivated ? 'computer-app-selection-selected' : null}`}
+            >COLOR</li>
+          <li onClick={() => this.activateWork('blueActivated')}
             className={`computer-app-selection-li ${blueActivated ? 'computer-app-selection-selected' : null}`}
             >BLUE</li>
-          <li onClick={() => this.activateRemember()}
+          <li onClick={() => this.activateWork('rememberActivated')}
             className={`computer-app-selection-li ${rememberActivated ? 'computer-app-selection-selected' : null}`}
             >REMEMBER</li>
-          <li onClick={() => this.activateGains()}
+          <li onClick={() => this.activateWork('gainsActivated')}
             className={`computer-app-selection-li ${gainsActivated ? 'computer-app-selection-selected' : null}`}
             >GAINS</li>
-          <li onClick={() => this.activatePortfolio()}
+          <li onClick={() => this.activateWork('portfolioActivated')}
             className={`computer-app-selection-li ${portfolioActivated ? 'computer-app-selection-selected' : null}`}
             >PORTFOLIO</li>
         </ul>

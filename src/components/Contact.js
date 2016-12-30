@@ -22,15 +22,15 @@ class Contact extends Component {
             method="POST">
             <h2>CONTACT ME</h2>
             <label><h4>Your Name: </h4>
-            <input name="name" type="text" placeholder='Name Here'
+            <input name="name" type="text" placeholder='Your name here'
               value={this.state.name} onChange={(e) => this.setState({name: e.target.value})}/>
             </label>
             <label><h4>Your Email: </h4>
-            <input name="_replyto" type="text" placeholder='Email Address Here'
+            <input name="_replyto" type="text" placeholder='Your email address here'
               value={this.state.email} onChange={(e) => this.setState({email: e.target.value})}/>
             </label>
-            <label><h4>What do you want?: </h4>
-            <textarea name="message" type="text" placeholder='Whatcha need?'
+            <label><h4>Message:</h4>
+            <textarea name="message" type="text" placeholder='How can I help you?'
               value={this.state.message} onChange={(e) => this.setState({message: e.target.value})}/>
             </label>
             <br/>

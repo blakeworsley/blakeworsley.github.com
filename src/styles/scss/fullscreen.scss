@@ -68,4 +68,7 @@
 
 .component-full-screen-content-3 {
   background : $color-main-vibrant-3;
+  h2, h3, h4 {
+      color: $color-lighter;
+  }
 }
