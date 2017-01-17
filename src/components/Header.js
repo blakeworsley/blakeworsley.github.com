@@ -5,7 +5,7 @@ class Header extends Component {
     const { activateNav, navActivated, aboutActivated, projectsActivated,
       contactActivated, activateAbout, activateProjects, activateContact } = this.props;
     return (
-      <section className={`Header ${navActivated ? 'Header-active' : ''} ${
+      <section onClick={() => {activateNav()}} className={`Header ${navActivated ? 'Header-active' : ''} ${
         (aboutActivated || projectsActivated || contactActivated) ? 'minimize-header' : ''}`}>
         {navActivated ?
           <img src='./img/arrow.svg' className='navigationImg' role='presentation'
@@ -42,7 +42,7 @@ class Header extends Component {
             </p>
             <p>I am a Front End Web Developer and former Olympic Swimmer</p>
             <p>Currently looking for web development and design work.</p>
-            
+
           </section>
           <img src='./img/logo.svg' className='header-logo' role='presentation'/>
         </aside>

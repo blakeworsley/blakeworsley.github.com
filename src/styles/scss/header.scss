@@ -7,7 +7,6 @@
   left: 0;
   margin: 10px 0px;
   line-height: 30px;
-  overflow-y: scroll;
 }
 
 .header-title {
@@ -75,7 +74,10 @@
   z-index: 1;
 }
 
-.Header .navigationImg:hover {
+.Header:hover {
+}
+
+.Header:hover .navigationImg {
   transform: scale(1.1);
   -webkit-transform: scale(1.1);
   -moz-transform: scale(1.1);

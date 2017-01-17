@@ -161,8 +161,7 @@ button:hover, button:focus {
   top: 0;
   left: 0;
   margin: 10px 0px;
-  line-height: 30px;
-  overflow-y: scroll; }
+  line-height: 30px; }
 
 .header-title {
   letter-spacing: 0.1em;
@@ -219,7 +218,7 @@ button:hover, button:focus {
   transition: 0.25s;
   z-index: 1; }
 
-.Header .navigationImg:hover {
+.Header:hover .navigationImg {
   transform: scale(1.1);
   -webkit-transform: scale(1.1);
   -moz-transform: scale(1.1);
