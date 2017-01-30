@@ -161,7 +161,8 @@ button:hover, button:focus {
   top: 0;
   left: 0;
   margin: 10px 0px;
-  line-height: 30px; }
+  line-height: 30px;
+  overflow-y: scroll; }
 
 .header-title {
   letter-spacing: 0.1em;
@@ -175,6 +176,9 @@ button:hover, button:focus {
   -moz-transform: rotate(270deg);
   -o-transform: rotate(270deg);
   -ms-transform: rotate(270deg); }
+
+.Header:hover .header-title {
+  opacity: 1; }
 
 .header-title-inactive {
   opacity: 0;
@@ -218,6 +222,9 @@ button:hover, button:focus {
   transition: 0.25s;
   z-index: 1; }
 
+.Header:hover {
+  background: white; }
+
 .Header:hover .navigationImg {
   transform: scale(1.1);
   -webkit-transform: scale(1.1);
@@ -230,14 +237,15 @@ button:hover, button:focus {
   display: block;
   padding: 10px 106px; }
 
-.social-icons {
-  text-align: center; }
+.header-social {
+  padding: 0px 40px;
+  display: flex;
+  justify-content: space-between; }
 
 .social-logo {
   height: 30px;
   width: 30px;
   margin: 5px;
-  display: inline-block;
   transition: 0.1s; }
 
 .social-logo:hover {
@@ -530,6 +538,14 @@ button:hover, button:focus {
 
 .gains-screenshot {
   background: url(../../../public/img/gains-screenshot.png);
+  background-size: cover; }
+
+.electron-color-screenshot {
+  background: url(../../../public/img/electron-color-screenshot.gif);
+  background-size: cover; }
+
+.remember-screenshot {
+  background: url(../../../public/img/remember-screenshot.png);
   background-size: cover; }
 
 .project-header {

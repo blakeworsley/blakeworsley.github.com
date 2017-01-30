@@ -6,7 +6,7 @@ class ColorPicker extends Component {
       <section className='computer-application'>
         <section className='project-live'>
           <a href=''>
-            <div className='project-screenshot blue-screenshot'></div>      
+            <div className='project-screenshot electron-color-screenshot'></div>      
           </a>
         </section>
         <section className='project-code'>

@@ -4,7 +4,9 @@ class Remember extends Component {
   render() {
     return (
       <section className='computer-application'>
-        <section className='project-live'></section>
+        <section className='project-live'>
+            <div className='project-screenshot remember-screenshot'></div>              
+        </section>
         <section className='project-code'>
         <a href='https://github.com/Casey1449/1606-remember-2'>        
           <h4 className='project-header'>Ember based Reminder App</h4>

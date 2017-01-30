@@ -3,7 +3,6 @@ import ColorPicker from './work/ColorPicker';
 import Blue from './work/Blue';
 import Remember from './work/Remember';
 import Gains from './work/Gains';
-import Portfolio from './work/Portfolio';
 
 class ComputerScreen extends Component {
   constructor() {
@@ -13,7 +12,6 @@ class ComputerScreen extends Component {
       blueActivated: false,
       gainsActivated: false,
       rememberActivated: false,
-      portfolioActivated: false,
       computerFullscreenActivated: false,
       computerWindowMinimized: false,
     };
@@ -25,7 +23,6 @@ class ComputerScreen extends Component {
       blueActivated: false,
       gainsActivated: false,
       rememberActivated: false,
-      portfolioActivated: false,
       computerWindowMinimized: false
     });
   }
@@ -55,10 +52,10 @@ class ComputerScreen extends Component {
 
   render() {
     const { computerFullscreenActivated, computerWindowMinimized, colorPickerActivated,
-       blueActivated, gainsActivated, rememberActivated, portfolioActivated } = this.state;
+       blueActivated, gainsActivated, rememberActivated } = this.state;
     return (
       <section className='computer-screen'>
-        { (colorPickerActivated || blueActivated || gainsActivated || rememberActivated || portfolioActivated) ?
+        { (colorPickerActivated || blueActivated || gainsActivated || rememberActivated) ?
           <div className={`computer-browser ${computerFullscreenActivated ? 'computer-browser-fullscreen' : ''} ${computerWindowMinimized ? 'computer-browser-minimize' : ''}`}>
             <nav>
               <div className='computer-browser-nav-button nav-red-button'
@@ -72,7 +69,6 @@ class ComputerScreen extends Component {
               {blueActivated ? <Blue /> : null}
               {rememberActivated ? <Remember /> : null}
               {gainsActivated ? <Gains /> : null}
-              {portfolioActivated ? <Portfolio /> : null}
           </div>
           : null
         }
@@ -90,9 +86,6 @@ class ComputerScreen extends Component {
           <li onClick={() => this.activateWork('gainsActivated')}
             className={`computer-app-selection-li ${gainsActivated ? 'computer-app-selection-selected' : null}`}
             >GAINS</li>
-          <li onClick={() => this.activateWork('portfolioActivated')}
-            className={`computer-app-selection-li ${portfolioActivated ? 'computer-app-selection-selected' : null}`}
-            >PORTFOLIO</li>
         </ul>
       </section>
     );

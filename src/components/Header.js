@@ -33,13 +33,14 @@ class Header extends Component {
               <img src='./img/arrow-right.svg' className='selectedArrow' role='presentation'/>
             </span></h4>
           </nav>
-          <section className='header-bio'>
-            <p className='social-icons'>
+          <section className="header-social">
               <a href='http://codepen.io/blakeworsley/'><img src='./img/social/Codepen-black.svg' className='social-logo' role='presentation'/></a>
               <a href='https://github.com/blakeworsley'><img src='./img/social/Github-black.svg' className='social-logo' role='presentation'/></a>
               <a href='https://medium.com/@blakeworsley'><img src='./img/social/Medium-black.svg' className='social-logo' role='presentation'/></a>
               <a href='https://twitter.com/blakeworsley'><img src='./img/social/Twitter-black.svg' className='social-logo' role='presentation'/></a>
-            </p>
+          </section>
+          <section className='header-bio'>
+
             <p>I am a Front End Web Developer and former Olympic Swimmer</p>
             <p>Currently looking for web development and design work.</p>
 

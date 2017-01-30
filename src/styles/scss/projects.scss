@@ -40,7 +40,6 @@
   background-size: cover;
   width: 95%;
   height: 95%;
-  // font-size: 12px;
 }
 .computer-bottom {
   background: $color-medium-dark;
@@ -92,6 +91,16 @@
 }
 .gains-screenshot {
   background: url(../../../public/img/gains-screenshot.png);
+  background-size: cover;  
+}
+
+.electron-color-screenshot {
+  background: url(../../../public/img/electron-color-screenshot.gif);
+  background-size: cover;  
+}
+
+.remember-screenshot {
+  background: url(../../../public/img/remember-screenshot.png);
   background-size: cover;  
 }
 
