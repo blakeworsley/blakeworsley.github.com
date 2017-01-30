@@ -1,13 +1,15 @@
 {
-  "main.css": "static/css/main.dce203d9.css",
-  "main.css.map": "static/css/main.dce203d9.css.map",
-  "main.js": "static/js/main.0e1eaca3.js",
-  "main.js.map": "static/js/main.0e1eaca3.js.map",
+  "main.css": "static/css/main.f673f5f2.css",
+  "main.css.map": "static/css/main.f673f5f2.css.map",
+  "main.js": "static/js/main.c7f11dfe.js",
+  "main.js.map": "static/js/main.c7f11dfe.js.map",
   "static/media/blake-medium.png": "static/media/blake-medium.bd5af30e.png",
   "static/media/blake-small.png": "static/media/blake-small.39a93d08.png",
   "static/media/blue-screenshot-mobile.png": "static/media/blue-screenshot-mobile.6a207bb9.png",
   "static/media/blue-screenshot.png": "static/media/blue-screenshot.68e3b8a6.png",
+  "static/media/electron-color-screenshot.gif": "static/media/electron-color-screenshot.cc056af3.gif",
   "static/media/gains-screenshot-mobile.png": "static/media/gains-screenshot-mobile.88e055c5.png",
   "static/media/gains-screenshot.png": "static/media/gains-screenshot.1c578466.png",
+  "static/media/remember-screenshot.png": "static/media/remember-screenshot.3c853559.png",
   "static/media/steamboat-barn.jpg": "static/media/steamboat-barn.44242e86.jpg"
 }
